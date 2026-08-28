@@ -123,6 +123,8 @@ This is the recommended workflow for publications and large datasets, although t
 - one or more magres files
 - a metadata spreadsheet named `metadata_info.csv`
 
+A blank `metadata_info.csv` template can be downloaded [here](../assets/files/metadata_info.csv) to get started.
+
 The spreadsheet contains one row per magres file. The screenshots below show a working example of a bulk upload and metadata preparation.
 
 <figure markdown="1">
