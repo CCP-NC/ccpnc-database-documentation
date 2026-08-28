@@ -131,6 +131,7 @@ The table below organises every single metadata field by which you can filter th
 | External Database | ✓ | ✓ | Equality | Lowercase names |
 | External Database Reference Code | ✓ | ✓ | Depends | REFCODE behaviour differs |
 | Publication DOI | ✓ | ✓ | Equality | Free-text for DOI fragments |
+| Licence | ✓ | Not recommended | Filter panel | Exact value required for search bar |
 | XC Functional | ✓ | ✓ | Equality | Avoid substring matches |
 | Magnetic Shielding | ✓ | Limited | Filter panel | Histogram search |
 | Electric Field Gradient (Vzz) | ✓ | Limited | Filter panel | Histogram search |
@@ -597,6 +598,33 @@ After selecting the field, enter an equals sign (`=`) followed by the DOI. For e
     Use **Equality** search whenever the complete DOI is available.
 
     Reserve **Free-text** searches for situations where only part of the DOI is known.
+
+---
+
+### Data distribution licence
+
+Records can be filtered according to their data licence using the **Author/Origin/Dataset** section of the filter panel.
+
+Expand **Author/Origin/Dataset** and locate the **License** field. The licences represented in the current search results are displayed as selectable values together with the number of matching records.
+
+<figure markdown="1">
+  ![Filtering database records by data licence](../assets/screenshots/search/filter-license.png)
+  <figcaption>Filtering records by data licence from the Author/Origin/Dataset section of the filter panel.</figcaption>
+</figure>
+
+Select the checkbox next to the required licence to restrict the results to records carrying that licence. More than one licence can be selected if required.
+
+For licence searches, **the filter panel is recommended instead of the main search bar**. Licence values are stored using specific names and version identifiers, such as `PDDL v1.0` and `CC BY 4.0`. Selecting the displayed licence value from the filter panel avoids having to enter the exact stored string manually.
+
+CCP-NC currently permits data to be deposited under the following licences:
+
+| Licence | Description | Licence information |
+|---|---|---|
+| **PDDL v1.0** | Open Data Commons Public Domain Dedication and License | [Open Data Commons – PDDL v1.0](https://opendatacommons.org/licenses/pddl/) |
+| **ODC-By v1.0** | Open Data Commons Attribution License | [Open Data Commons – ODC-By v1.0](https://opendatacommons.org/licenses/by/) |
+| **CC BY 4.0** | Creative Commons Attribution 4.0 International | [Creative Commons – CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+
+As with the other filters, licence filtering can be combined with additional criteria such as publication DOI, dataset, external database, chemical composition, DFT code, functional or NMR parameters to progressively narrow the results.
 
 ---
 
