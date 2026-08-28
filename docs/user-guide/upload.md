@@ -135,7 +135,7 @@ The spreadsheet contains one row per magres file. The screenshots below show a w
 An example metadata spreadsheet is shown below.
 
 <figure markdown="1">
-  ![Example filled-in metadata_info spreadsheet](../assets/screenshots/upload/bulk-upload-csv-filled-in-part1.png)
+  ![Example filled-in metadata_info spreadsheet](../assets/screenshots/upload/bulk-upload-csv-filled-in.png)
   <figcaption>An example <code>metadata_info.csv</code>, with one row per MAGRES file, and its <code>filename</code> values matching the uploaded files exactly.</figcaption>
 </figure>
 
