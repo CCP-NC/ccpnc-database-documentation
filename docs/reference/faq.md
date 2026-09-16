@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-This page brings together common questions about depositing, searching, managing and downloading data in the **CCP-NC Database – Staging**.
+This page brings together common questions about depositing, searching, managing and downloading data in the **CCP-NC Database**.
 
 For detailed step-by-step instructions, follow the links to the relevant sections of the User Guide.
 
@@ -52,7 +52,7 @@ Use the metadata or notes to make it clear that the structure is believed to be 
 
 ### I have a very large number of calculations. Can they be deposited?
 
-Yes, subject to the upload limits of the staging service.
+Yes, subject to the current upload limits.
 
 A single upload may currently contain up to **32 GB** of data. Large collections can be uploaded in bulk using a `metadata_info.csv` file, and ZIP or TAR archives are unpacked automatically.
 
@@ -72,7 +72,7 @@ See [Bulk upload using `metadata_info.csv`](../user-guide/upload.md#bulk-upload-
 
 ### What file formats are supported?
 
-The CCP-NC staging service inherits the wider NOMAD Oasis parser infrastructure, so file formats supported by NOMAD can be uploaded.
+The CCP-NC database inherits the wider NOMAD Oasis parser infrastructure, so file formats supported by NOMAD can be uploaded.
 
 However, the **current CCP-NC NMR workflow is centred on magres files**, particularly magres output generated from CASTEP and Quantum ESPRESSO calculations.
 
@@ -96,7 +96,7 @@ Download the template directly [here](../assets/files/metadata_info.csv), or see
 
 ### Does the metadata spreadsheet have to be named exactly `metadata_info.csv`?
 
-Yes. For the current staging workflow, use the filename:
+Yes. For the current workflow, use the filename:
 
 ```text
 metadata_info.csv
@@ -108,7 +108,7 @@ The `filename` value in each row must also exactly match the corresponding magre
 
 Not necessarily.
 
-In the current staging deployment, absence of the metadata CSV is a **soft metadata failure rather than an automatic parsing failure**. The magres data may still parse successfully, while an ERROR-level message is recorded in the entry Logs.
+Currently, absence of the metadata CSV is a **soft metadata failure rather than an automatic parsing failure**. The magres data may still parse successfully, while an ERROR-level message is recorded in the entry Logs.
 
 For a single magres file, the parser can create an ELN metadata entry that can be completed manually.
 
@@ -237,7 +237,7 @@ This is a migration artefact and does not indicate that the search has malfuncti
 
 ### Why can I search NMR parameters only for certain elements?
 
-The staging search interface exposes element-resolved magnetic shielding and electric field gradient searches for the commonly used NMR elements currently configured in the CCP-NC application.
+The search interface exposes element-resolved magnetic shielding and electric field gradient searches for the commonly used NMR elements currently configured in the CCP-NC application.
 
 The available search fields may expand as the database and search interface continue to develop.
 
@@ -269,7 +269,7 @@ See [Downloading Complete Datasets](../user-guide/results.md#downloading-complet
 
 ### I opened a dataset and the displayed records do not look correct. What should I do?
 
-There is a known staging-interface issue where an individual dataset view may occasionally require a browser refresh before the correct dataset contents are displayed.
+There is a known interface issue where an individual dataset view may occasionally require a browser refresh before the correct dataset contents are displayed.
 
 Refresh the page and verify that the dataset filter is applied.
 
@@ -307,13 +307,13 @@ Contact [Support](support.md) if a published upload requires removal or administ
 
 Yes.
 
-The staging upload interface currently supports embargo periods of up to **36 months**. Select the embargo period in the final **Publish** step.
+The upload interface currently supports embargo periods of up to **36 months**. Select the embargo period in the final **Publish** step.
 
 Because publication makes the upload immutable, make sure the record metadata are complete before publishing under embargo.
 
 ### What licence is applied when I publish?
 
-In the current staging implementation, the underlying NOMAD publication workflow applies **CC BY 4.0** when data are published.
+Currently, the underlying NOMAD publication workflow applies **CC BY 4.0** when data are published.
 
 CCP-NC also records the depositor's intended data-distribution licence as searchable metadata. The current metadata template accepts:
 
@@ -325,7 +325,7 @@ CCP-NC-specific publication-licence handling is still being developed.
 
 ### Why can my CCP-NC metadata licence differ from the licence shown by NOMAD?
 
-This is a current staging limitation.
+This is a current limitation.
 
 The CCP-NC metadata field records the depositor's intended data-distribution licence and is available for search and processed-data export. Separately, the underlying NOMAD publication workflow currently applies CC BY 4.0 at platform publication.
 
@@ -333,13 +333,13 @@ These two layers are being aligned as the CCP-NC service develops towards produc
 
 ### Does the database assign a DOI to every record?
 
-No DOI-minting service for individual CCP-NC records is currently described by the staging workflow.
+No DOI-minting service for individual CCP-NC records is currently described by the upload workflow.
 
 Where a record is associated with a peer-reviewed publication, provide the publication DOI in its metadata.
 
 ---
 
-## Staging Service and Access
+## Service Status and Access
 
 ### Why does the site use ORCID Sandbox rather than my normal ORCID account?
 
@@ -359,9 +359,9 @@ Searching and browsing are publicly accessible. Authentication is required for a
 
 No.
 
-This is a staging service used for testing, evaluation and community feedback. Some interface elements, search capabilities, authentication behaviour and CCP-NC-specific workflows may change before the production deployment.
+The deployment accepts community feedback based on your user experience. Some interface elements, search capabilities, authentication behaviour and CCP-NC-specific workflows may change in the future.
 
-Where a staging limitation is known, it is identified in the relevant documentation.
+Where a limitation is known, it is identified in the relevant documentation.
 
 ---
 

@@ -1,6 +1,6 @@
 # Getting Support
 
-If you run into trouble with the staging site — including requesting an invite-only email account (see [Logging In](../getting-started.md#authentication)) — you can reach out to the administrators or the CCP-NC team directly.
+If you run into trouble with the site — including requesting an invite-only email account (see [Logging In](../getting-started.md#authentication)) — you can reach out to the administrators or the CCP-NC team directly.
 
 ## Administrators
 

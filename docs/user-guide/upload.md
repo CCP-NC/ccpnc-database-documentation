@@ -2,7 +2,7 @@
 
 The CCP-NC NMR Database uses the NOMAD Oasis upload infrastructure for data ingestion. This section focuses on the recommended workflow for uploading magres data to the CCP-NC database.
 
-While NOMAD supports a very wide range of first-principles simulation codes, the current staging release of the CCP-NC database is centred around magres files generated using CASTEP and Quantum ESPRESSO. Support for automatically constructing complete NMR workflows directly from DFT code outputs is under active development.
+While NOMAD supports a very wide range of first-principles simulation codes, the CCP-NC database is currently centred around magres files generated using CASTEP and Quantum ESPRESSO. Support for automatically constructing complete NMR workflows directly from DFT code outputs is under active development.
 
 !!! note "Official NOMAD documentation"
     This section focuses on the CCP-NC magres upload workflow. For a complete description of the NOMAD upload interface and all available functionality, please refer to the [official NOMAD documentation](https://docs.nomad-lab.eu/1.4.3/tutorial/upload_publish.html).
@@ -13,7 +13,7 @@ While NOMAD supports a very wide range of first-principles simulation codes, the
 
 NOMAD provides parsers for a large number of electronic structure, molecular dynamics and atomistic simulation packages. Any file formats supported by NOMAD Central are also accepted by the CCP-NC NOMAD Oasis.
 
-For the current CCP-NC staging release, users are encouraged to upload **magres files**. Existing parsers for DFT codes such as CASTEP or Quantum ESPRESSO will successfully parse their native output files, but they currently generate independent workflow entries rather than extracting NMR quantities into CCP-NC records. Automatic linkage between DFT workflows and magres data is an active area of development.
+Currently, users are encouraged to upload **magres files**. Existing parsers for DFT codes such as CASTEP or Quantum ESPRESSO will successfully parse their native output files, but they currently generate independent workflow entries rather than extracting NMR quantities into CCP-NC records. Automatic linkage between DFT workflows and magres data is an active area of development.
 
 **Supported upload formats**
 
@@ -47,7 +47,7 @@ Bulk magres uploads must include a metadata spreadsheet named `metadata_info.csv
 
 The metadata file should be placed inside the uploaded folder or ZIP archive.
 
-If no metadata spreadsheet is supplied, the upload will still be parsed. There is no hard check on the metadata, but in the current staging deployment of the magres database, the absence of metadata will be logged as an error in the processing logs of each entry. 
+If no metadata spreadsheet is supplied, the upload will still be parsed. There is no hard check on the metadata, but the absence of metadata will currently be logged as an error in the processing logs of each entry. 
 
 **Metadata column headers:**
 Users are requested to read the metadata descriptions below and follow the instructions to fill in the metadata fields of the input metadata csv file to include with their uploads.

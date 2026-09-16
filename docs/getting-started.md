@@ -1,12 +1,12 @@
 # Getting Started
 
-The **Getting Started** guide introduces the CCP-NC Database staging platform and explains how to access its features for the first time.
+The **Getting Started** guide introduces the CCP-NC Database platform and explains how to access its features for the first time.
 
 Most of the database can be explored without creating an account. Authentication is only required for features that modify database content, such as uploading new datasets or updating existing metadata.
 
 This guide covers:
 
-- Accessing the staging website
+- Accessing the website
 - Searching the database without logging in
 - Signing in using either email or ORCID Sandbox authentication
 - First-time account setup
@@ -15,13 +15,13 @@ This guide covers:
 
 ---
 
-## Accessing the Staging Database
+## Accessing the Database
 
-The CCP-NC Database staging website can be accessed directly from:
+The CCP-NC Database website can be accessed directly from:
 
 **[magres-staging.psdi.ac.uk](https://magres-staging.psdi.ac.uk/nomad-oasis/gui/about/information)**
 
-The landing page introduces the staging deployment and provides access to the database through the navigation bar at the top of the page.
+The landing page provides access to the database through the navigation bar at the top of the page.
 
 <figure markdown="1">
   ![Home page before login](assets/screenshots/auth/home-page-default.png)
@@ -54,7 +54,7 @@ Authentication is only required for actions that modify the database, including:
 
 ## Authentication
 
-The staging deployment currently supports two authentication methods:
+The database currently supports two authentication methods:
 
 1. **ORCID Sandbox authentication (recommended)**
 2. **Email authentication**
@@ -159,7 +159,7 @@ Logging out does not affect any datasets or metadata stored in the database; it 
 
 ## Administrator Contact
 
-If you experience problems signing in or require an email account for the staging platform, please contact one of the database administrators — see [Support](reference/support.md) for current contact details.
+If you experience problems signing in or require an email account, please contact one of the database administrators — see [Support](reference/support.md) for current contact details.
 
 ---
 
@@ -178,4 +178,4 @@ If you experience problems signing in or require an email account for the stagin
 
 ## Next Step
 
-Once you have successfully accessed the staging platform, continue to the [Searching](user-guide/search.md) section to learn how to discover computational NMR datasets using the CCP-NC search interface, filter panels and global search tools.
+Once you have successfully accessed the platform, continue to the [Searching](user-guide/search.md) section to learn how to discover computational NMR datasets using the CCP-NC search interface, filter panels and global search tools.

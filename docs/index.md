@@ -1,12 +1,12 @@
 # Welcome
 
-Welcome to the documentation for the CCP-NC Database – Staging, an online repository for computational solid-state NMR data developed by the Collaborative Computational Project for NMR Crystallography ([CCP-NC](https://www.ccpnc.ac.uk/)).
+Welcome to the documentation for the CCP-NC Database, an online repository for computational solid-state NMR data developed by the Collaborative Computational Project for NMR Crystallography ([CCP-NC](https://www.ccpnc.ac.uk/)).
 
 The database provides a central platform for researchers to discover, explore, share and reuse computational NMR datasets together with their associated structures, metadata and scientific provenance.
 
 The database originated with the purpose of storing the interoperable [magres files](https://www.ccpnc.ac.uk/docs/magres/magres-format.pdf) as a common standard for exchanging first-principles solid-state NMR calculations, the long-term vision is to support computational NMR data more broadly across electronic structure codes, data models and emerging community workflows.
 
-This documentation explains how to use the staging database, perform searches, browse datasets, upload new records and understand the information contained within individual database entries.
+This documentation explains how to use the CCP-NC database, perform searches, browse datasets, upload new records and understand the information contained within individual database entries.
 
 ## What is the CCP-NC Database?
 
@@ -39,7 +39,7 @@ Whether you wish to locate a single published calculation or explore trends acro
 
 ## Key Capabilities
 
-The staging database currently enables users to:
+The CCP-NC database currently enables users to:
 
 - Search computational NMR datasets using material composition, computational metadata and site-resolved NMR parameters.
 - Browse datasets organised by publication and explore the individual calculations associated with each dataset.
@@ -97,7 +97,7 @@ Detailed instructions are provided in [Getting Started → Authentication](getti
 
 If you are new to the database, we recommend the following order:
 
-1. Learn how to [access the staging platform](getting-started.md#accessing-the-staging-database).
+1. Learn how to [access the platform](getting-started.md#accessing-the-database).
 2. Explore the [search interface](user-guide/search.md) and become familiar with the available filters.
 3. [View individual records](user-guide/results.md) to understand the available metadata and computational information.
 4. If you'd like to learn about contributing data, continue to the [Uploading](user-guide/upload.md) documentation.
@@ -111,7 +111,7 @@ If you are new to the database, we recommend the following order:
 
     ---
 
-    Learn how to access the staging platform, authenticate your account and navigate the CCP-NC Database.
+    Learn how to access the platform, authenticate your account and navigate the CCP-NC Database.
 
     [:octicons-arrow-right-24: Get started](getting-started.md)
 

@@ -1,6 +1,6 @@
 # Searching the Database
 
-You can search and explore the database with or without a user account — see [Accessing the Site](../getting-started.md#accessing-the-staging-database).
+You can search and explore the database with or without a user account — see [Accessing the Site](../getting-started.md#accessing-the-database).
 
 ## Overview
 
@@ -61,7 +61,7 @@ The precise sequence of selections and available search options varies slightly 
 
 The search results table displays all records matching the current search criteria.
 
-Each row represents an individual computational NMR record and provides a summary of its metadata. By default, the staging deployment displays the following columns:
+Each row represents an individual computational NMR record and provides a summary of its metadata. By default, the following columns are displayed:
 
 - Chemical Name
 - Unit Cell Formula
@@ -83,7 +83,7 @@ Select the **column configuration** button (![column configuration icon](../asse
 
 Tick or untick individual checkboxes to control which metadata fields are displayed. Changes are applied immediately without needing to repeat the search.
 
-The staging deployment currently supports the following optional columns:
+The following optional columns are currently supported:
 
 - Magres Immutable ID (legacy records only)
 - DFT Code
@@ -110,7 +110,7 @@ Where available, cicking the column heading sorts the search results in ascendin
 
 This can be particularly useful when reviewing recently uploaded records by sorting the **Upload Time** column, for example, as seen in the figure above.
 
-!!! note "Staging deployment"
+!!! note "Ongoing development"
     The available columns and sorting options may evolve as additional metadata fields and search capabilities are introduced in future releases of the CCP-NC Database.
 
 ---
@@ -635,7 +635,7 @@ The CCP-NC Database allows records to be filtered according to the exchange-corr
 
 The **Functionals** filter contains the exchange-correlation functionals represented within the current search results.
 
-The staging database currently includes functionals from several families, including:
+The database currently includes functionals from several families, including:
 
 - Local Density Approximation (LDA)
 - Generalised Gradient Approximation (GGA)
@@ -721,7 +721,7 @@ Magnetic shielding searches are currently available for the most commonly studie
 
 The filter panel is the only recommended search method for filtering records by NMR parameters. Within the **NMR Parameters** section, select `Magnetic Shielding (ppm)` and then the element of interest.
 
-The staging deployment currently supports magnetic shielding searches for the common NMR elements listed within the interface. Each element contains an interactive histogram showing the distribution of calculated shielding values across the database.
+Magnetic shielding searches are currently supported for the common NMR elements listed within the interface. Each element contains an interactive histogram showing the distribution of calculated shielding values across the database.
 
 Adjust the histogram sliders to define the desired search range. Only records containing site-resolved magnetic shielding values within the selected range are returned.
 
@@ -825,7 +825,7 @@ Histogram-based filtering within the Filter Panel provides the recommended workf
 
 ---
 
-### Staging Deployment
+### Ongoing Development
 
 The CCP-NC Database is under active development.
 

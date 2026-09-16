@@ -1,8 +1,8 @@
-site_name: CCP-NC Magres Database - Staging
-site_description: User documentation for the CCP-NC Magres Database staging deployment (NOMAD Oasis)
-site_url: https://ccp-nc.github.io/ccpnc-magres-staging-docs/
-repo_url: https://github.com/CCP-NC/ccpnc-magres-staging-docs
-repo_name: CCP-NC/ccpnc-magres-staging-docs
+site_name: CCP-NC Magres Database
+site_description: User documentation for the CCP-NC Magres Database (NOMAD Oasis)
+site_url: https://ccp-nc.github.io/ccpnc-database-documentation/
+repo_url: https://github.com/CCP-NC/ccpnc-database-documentation
+repo_name: CCP-NC/ccpnc-database-documentation
 edit_uri: edit/main/docs/
 
 extra_css:
