@@ -1,0 +1,1384 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="User documentation for the CCP-NC Magres Database (NOMAD Oasis)">
+      
+      
+      
+        <link rel="canonical" href="https://ccp-nc.github.io/ccpnc-database-documentation/user-guide/upload/">
+      
+      
+        <link rel="prev" href="../results/">
+      
+      
+        <link rel="next" href="../datasets/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Uploading Data - CCP-NC Magres Database</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#uploading-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CCP-NC Magres Database" class="md-header__button md-logo" aria-label="CCP-NC Magres Database" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CCP-NC Magres Database
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Uploading Data
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CCP-NC/ccpnc-database-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CCP-NC/ccpnc-database-documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../getting-started/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../search/" class="md-tabs__link">
+          
+  
+  
+  User Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../fair-nmr-data/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAIR NMR Data
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../video-tutorials/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Video Tutorials
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../reference/faq/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../reference/support/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Support
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CCP-NC Magres Database" class="md-nav__button md-logo" aria-label="CCP-NC Magres Database" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CCP-NC Magres Database
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CCP-NC/ccpnc-database-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CCP-NC/ccpnc-database-documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    User Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Searching the Database
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../results/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Viewing Results
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uploading Data
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uploading Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preparing-your-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preparing your upload
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparing your upload">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metadata-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metadata requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#starting-a-new-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Starting a new upload
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#magres-upload-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Magres upload workflows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Magres upload workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bulk-upload-using-metadata_infocsv-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bulk upload using metadata_info.csv (recommended)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-magres-upload-using-the-eln" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Single magres upload using the ELN
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processing-uploaded-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Processing uploaded files
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Processing uploaded files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#processing-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Processing status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-parser-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checking parser logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reprocessing-entries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reprocessing entries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upload metadata
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-members-and-visibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upload members and visibility
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publishing-your-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publishing your upload
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datasets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datasets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fair-nmr-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAIR NMR Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../video-tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Video Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="uploading-data">Uploading Data<a class="headerlink" href="#uploading-data" title="Permanent link">&para;</a></h1>
+<p>The CCP-NC NMR Database uses the NOMAD Oasis upload infrastructure for data ingestion. This section focuses on the recommended workflow for uploading magres data to the CCP-NC database.</p>
+<p>While NOMAD supports a very wide range of first-principles simulation codes, the CCP-NC database is currently centred around magres files generated using CASTEP and Quantum ESPRESSO. Support for automatically constructing complete NMR workflows directly from DFT code outputs is under active development.</p>
+<div class="admonition note">
+<p class="admonition-title">Official NOMAD documentation</p>
+<p>This section focuses on the CCP-NC magres upload workflow. For a complete description of the NOMAD upload interface and all available functionality, please refer to the <a href="https://docs.nomad-lab.eu/1.4.3/tutorial/upload_publish.html">official NOMAD documentation</a>.</p>
+</div>
+<hr />
+<h2 id="preparing-your-upload">Preparing your upload<a class="headerlink" href="#preparing-your-upload" title="Permanent link">&para;</a></h2>
+<p>NOMAD provides parsers for a large number of electronic structure, molecular dynamics and atomistic simulation packages. Any file formats supported by NOMAD Central are also accepted by the CCP-NC NOMAD Oasis.</p>
+<p>Currently, users are encouraged to upload <strong>magres files</strong>. Existing parsers for DFT codes such as CASTEP or Quantum ESPRESSO will successfully parse their native output files, but they currently generate independent workflow entries rather than extracting NMR quantities into CCP-NC records. Automatic linkage between DFT workflows and magres data is an active area of development.</p>
+<p><strong>Supported upload formats</strong></p>
+<p>Uploads may consist of:</p>
+<ul>
+<li>individual magres files</li>
+<li>collections of magres files</li>
+<li>folders containing magres files</li>
+<li>compressed ZIP or TAR archives</li>
+</ul>
+<p>Compressed archives are unpacked automatically after upload.</p>
+<p>For magres uploads, the parser supports multiple directory levels within the uploaded archive and will automatically search for magres files together with their associated metadata files where available.</p>
+<div class="admonition tip">
+<p class="admonition-title">Recommended workflow</p>
+<p>If your upload contains multiple folders or many files, compress the entire collection into a single ZIP archive before uploading. This keeps related files together and simplifies transfer.</p>
+</div>
+<p><strong>Upload size</strong></p>
+<p>Individual uploads may be up to <strong>32 GB</strong> in size.</p>
+<p><strong>File naming</strong></p>
+<p>There are no mandatory naming conventions for magres files.</p>
+<p>For bulk uploads using a metadata spreadsheet (see below), the <strong>filename</strong> column in the metadata file <strong>must exactly match</strong> the corresponding magres filename so that metadata can be assigned correctly.</p>
+<h3 id="metadata-requirements">Metadata requirements<a class="headerlink" href="#metadata-requirements" title="Permanent link">&para;</a></h3>
+<p>Bulk magres uploads must include a metadata spreadsheet named <code>metadata_info.csv</code>, which can be downloaded <a href="../../assets/files/metadata_info.csv">here</a>.</p>
+<p>The metadata file should be placed inside the uploaded folder or ZIP archive.</p>
+<p>If no metadata spreadsheet is supplied, the upload will still be parsed. There is no hard check on the metadata, but the absence of metadata will currently be logged as an error in the processing logs of each entry. </p>
+<p><strong>Metadata column headers:</strong>
+Users are requested to read the metadata descriptions below and follow the instructions to fill in the metadata fields of the input metadata csv file to include with their uploads.</p>
+<table>
+<thead>
+<tr>
+<th>Column header name</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>must exactly match the corresponding magres filename, treated as a <code>mainfile</code></td>
+<td>diethylcarbamazine citrate 1.magres</td>
+</tr>
+<tr>
+<td>chemname</td>
+<td>Chemical name assigned to the material, will be stored in <code>data.ccpnc_metadata.material_properties.chemical_name</code></td>
+<td><code>diethylcarbamazine citrate</code> (common name) OR an IUPAC name such as <code>2-(((2,3-Dihydroxypropyl)iminio)methyl)-4-nitrophenolate</code></td>
+</tr>
+<tr>
+<td>license</td>
+<td>Data distribution license</td>
+<td>One of these values in lowercase <code>cc-by</code>, <code>pddl</code> or <code>odc-by</code></td>
+</tr>
+<tr>
+<td>doi</td>
+<td>Publication DOI associated with a peer-reviewed work that includes this dataset</td>
+<td>Complete doi only, no need to enter doi.org url. For example, just <code>10.1038/s41557-019-0304-z</code> a complete DOI is valid</td>
+</tr>
+<tr>
+<td>chemform</td>
+<td>Author free-text notes about the structural descriptors, its polymorphic forms, temperature etc.</td>
+<td>A few but not limiting to <code>Structure at 150K</code>, <code>Crystalline form P 1 21/c 1</code>, <code>Form I</code></td>
+</tr>
+<tr>
+<td>extref_type</td>
+<td>Indicates an external database name which contains the reference crystal structure information</td>
+<td>Accepted values are <code>csd</code>, <code>icsd</code>, <code>cod</code>, <code>other</code> (lowercase only)</td>
+</tr>
+<tr>
+<td>extref_other</td>
+<td>Other database names not mentioned in the previous row</td>
+<td>Enter a lowercase database name, only if the reference is not from one of the above 3 sites, and <code>other</code> was entered under <code>extref_type</code></td>
+</tr>
+<tr>
+<td>extref_code</td>
+<td>The unique reference code linking the record to the external database</td>
+<td>alphanumeric codes such as <code>QATMON</code>, <code>QATMON01</code>, etc. for CSD files, unique numeric digits for ICSD and COD files</td>
+</tr>
+<tr>
+<td>notes</td>
+<td>Free-text author notes that can optionally be provided about the structures for the overall upload</td>
+<td>No restrictions. This field ia not indexed for searching. Purely optional.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="starting-a-new-upload">Starting a new upload<a class="headerlink" href="#starting-a-new-upload" title="Permanent link">&para;</a></h2>
+<p>Uploads are created from the <strong>Publish</strong> menu.</p>
+<figure>
+<p><img alt="Publish menu showing the Uploads option" src="../../assets/screenshots/upload/how-to-get-to-uploads.png" />
+  </p>
+<figcaption>The Publish menu: Uploads, Datasets, and Search your data.</figcaption>
+</figure>
+<p>Select:</p>
+<blockquote>
+<p><strong>Publish → Uploads</strong></p>
+</blockquote>
+<p>to open your personal uploads page. Click <strong>Create New Upload</strong>.</p>
+<figure>
+<p><img alt="Your uploads landing page, with the option to create an upload via shell command" src="../../assets/screenshots/upload/uploads_welcome_page.png" />
+  </p>
+<figcaption>The Your uploads page: create an upload through the browser, or via a shell command using your personal upload token.</figcaption>
+</figure>
+<p>A new upload workspace is created where files can be added before publication. The upload page is organised into five stages:</p>
+<ol>
+<li>Prepare and upload your files</li>
+<li>Process data</li>
+<li>Edit visibility and access</li>
+<li>Edit metadata</li>
+<li>Publish</li>
+</ol>
+<figure>
+<p><img alt="New upload workspace with the five-stage process" src="../../assets/screenshots/upload/uploads_page_before_upload.png" />
+  </p>
+<figcaption>A new, unnamed upload workspace, showing the five stages: prepare and upload files, process data, edit visibility and access, edit metadata, and publish.</figcaption>
+</figure>
+<p>Files may be added by:</p>
+<ul>
+<li>clicking <strong>Drop files here or click to open dialog</strong></li>
+<li>dragging files directly onto the upload area</li>
+<li>dragging folders onto the upload area</li>
+<li>uploading ZIP/TAR archives</li>
+</ul>
+<p>Compressed archives are unpacked automatically.</p>
+<p>Uploads remain private while unpublished. You may leave the page at any time and continue working on unpublished uploads later.</p>
+<hr />
+<h2 id="magres-upload-workflows">Magres upload workflows<a class="headerlink" href="#magres-upload-workflows" title="Permanent link">&para;</a></h2>
+<p>Two upload workflows are currently recommended.</p>
+<h3 id="bulk-upload-using-metadata_infocsv-recommended">Bulk upload using <code>metadata_info.csv</code> (recommended)<a class="headerlink" href="#bulk-upload-using-metadata_infocsv-recommended" title="Permanent link">&para;</a></h3>
+<p>This is the recommended workflow for publications and large datasets, although the user is not restricted from using this csv metadata route for a single file upload. Prepare a folder containing:</p>
+<ul>
+<li>one or more magres files</li>
+<li>a metadata spreadsheet named <code>metadata_info.csv</code></li>
+</ul>
+<p>A blank <code>metadata_info.csv</code> template can be downloaded <a href="../../assets/files/metadata_info.csv">here</a> to get started.</p>
+<p>The spreadsheet contains one row per magres file. The screenshots below show a working example of a bulk upload and metadata preparation.</p>
+<figure>
+<p><img alt="Upload workspace showing eight MAGRES files and a metadata_info file" src="../../assets/screenshots/upload/bulk-upload-with-csv-part1.png" />
+  </p>
+<figcaption>A folder of MAGRES files uploaded together with a <code>metadata_info</code> spreadsheet, ready for processing.</figcaption>
+</figure>
+<p>An example metadata spreadsheet is shown below.</p>
+<figure>
+<p><img alt="Example filled-in metadata_info spreadsheet" src="../../assets/screenshots/upload/bulk-upload-csv-filled-in.png" />
+  </p>
+<figcaption>An example <code>metadata_info.csv</code>, with one row per MAGRES file, and its <code>filename</code> values matching the uploaded files exactly.</figcaption>
+</figure>
+<p>After selecting or dragging the folder onto the upload area, parsing begins automatically. The below screenshot shows an upload mid-way in the process of getting all uploaded files parsed.</p>
+<figure>
+<p><img alt="Process data table showing parsing in progress" src="../../assets/screenshots/upload/parsing-in-progress.png" />
+  </p>
+<figcaption>Parsing in progress: 2 of 8 entries processed so far, with the remaining entries still marked READY.</figcaption>
+</figure>
+<p>Once processing has completed successfully, each magres file becomes an individual workflow entry.</p>
+<figure>
+<p><img alt="Process data table showing all entries parsed successfully" src="../../assets/screenshots/upload/parsing-completed-successfully.png" />
+  </p>
+<figcaption>All 8 entries processed with SUCCESS status, each now shown as an individual workflow simulation entry.</figcaption>
+</figure>
+<h3 id="single-magres-upload-using-the-eln">Single magres upload using the ELN<a class="headerlink" href="#single-magres-upload-using-the-eln" title="Permanent link">&para;</a></h3>
+<p>Uploading a single magres file without a metadata spreadsheet triggers a different workflow.</p>
+<p>The magres parser extracts all available information from the magres file and automatically creates an accompanying <strong>Electronic Laboratory Notebook (ELN)</strong> metadata entry with the default name <code>metadata.archive.json</code>.</p>
+<figure>
+<p><img alt="Upload workspace showing the automatically created metadata.archive.json entry" src="../../assets/screenshots/upload/eln-metadata-update.png" />
+  </p>
+<figcaption>A single MAGRES file uploaded without a metadata spreadsheet: an accompanying <code>metadata.archive.json</code> ELN entry is created automatically.</figcaption>
+</figure>
+<p>Open the generated <code>metadata.archive.json</code> entry and complete the metadata fields before publication. The <code>Main Magres Entry</code> field at the top of the form by default is associated with the single magres file that was uploaded.</p>
+<figure>
+<p><img alt="CCPNC Metadata Entry form with fields for chemical name, license, DOI and more" src="../../assets/screenshots/upload/eln-entry-form-data.png" />
+  </p>
+<figcaption>The CCPNC Metadata Entry form: Main Magres Entry, author's ORCID iD, chemical name, license, publication DOI, external database references, and notes, with the SYNC METADATA TO MAGRES ENTRY button at the top.</figcaption>
+</figure>
+<p>The metadata fields are straightforward and the instructions for filling them are the same as that of the spreadsheet columns as explained in section <a href="#metadata-requirements">Metadata requirements</a>. The ELN provides fields including:</p>
+<ul>
+<li>Chemical name</li>
+<li>Publication DOI</li>
+<li>Licence</li>
+<li>External database identifiers</li>
+<li>Author information</li>
+<li>Additional notes</li>
+</ul>
+<p>Once the metadata fields in the form have been filled in, click the <strong>SYNC METADATA TO MAGRES ENTRY</strong> button at the top of the form to automatically save the notebook and trigger synchronisation of the metadata fields over to the <code>data.ccpnc_metadata</code> section of the magres mainfile.</p>
+<div class="admonition warning">
+<p class="admonition-title">Complete the metadata before publishing</p>
+<p>The ELN workflow is intended as a convenience feature for single-file uploads. Authors are strongly encouraged to complete the metadata before publishing so that records can be searched correctly and remain FAIR.</p>
+</div>
+<hr />
+<h2 id="processing-uploaded-files">Processing uploaded files<a class="headerlink" href="#processing-uploaded-files" title="Permanent link">&para;</a></h2>
+<p>Once magres files have been uploaded, parsing begins automatically. Each processed file appears in the <strong>Process data</strong> table together with its processing status.</p>
+<h3 id="processing-status">Processing status<a class="headerlink" href="#processing-status" title="Permanent link">&para;</a></h3>
+<p>During processing an entry may progress through several internal states. Users will normally encounter three meaningful states:</p>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Processing</td>
+<td>The parser is still running.</td>
+</tr>
+<tr>
+<td>SUCCESS</td>
+<td>Parsing completed successfully.</td>
+</tr>
+<tr>
+<td>FAILURE</td>
+<td>Parsing failed and requires investigation.</td>
+</tr>
+</tbody>
+</table>
+<p>A <strong>SUCCESS</strong> status indicates that the parser completed without crashing. It does <strong>not</strong> necessarily guarantee that every optional piece of metadata was present. For this reason, it is good practice to inspect the parser logs whenever unexpected results are observed.</p>
+<h3 id="checking-parser-logs">Checking parser logs<a class="headerlink" href="#checking-parser-logs" title="Permanent link">&para;</a></h3>
+<p>Click the arrow next to an entry to open its detailed page. Select the <strong>LOGS</strong> tab to inspect parser messages. The <strong>LOGS</strong> tab was briefly discussed in the <a href="../results/#logs-tab">Viewing Results</a> section.</p>
+<figure>
+<p><img alt="Logs tab showing an error about a missing metadata_info.csv file" src="../../assets/screenshots/upload/metadata-missing-log.png" />
+  </p>
+<figcaption>An ERROR log entry explaining that no <code>metadata_info.csv</code> was found, and listing the required column names.</figcaption>
+</figure>
+<p>For example, if no <code>metadata_info.csv</code> file is found during a bulk magres upload, the parser records an error message in every entry explaining that metadata was not supplied and provides instructions.</p>
+<h3 id="reprocessing-entries">Reprocessing entries<a class="headerlink" href="#reprocessing-entries" title="Permanent link">&para;</a></h3>
+<p>If processing fails or files have been replaced while the upload is still unpublished, the upload can be reprocessed using the <strong>Reprocess</strong> button located at the top of the upload page.</p>
+<p>Unpublished entries may also be deleted or replaced.</p>
+<p>If repeated processing failures occur, or assistance is required after publication, please contact the <a href="../../reference/support/">CCP-NC database administrators</a>.</p>
+<hr />
+<h2 id="upload-metadata">Upload metadata<a class="headerlink" href="#upload-metadata" title="Permanent link">&para;</a></h2>
+<p>Step 4 of the upload page allows general metadata to be applied to all entries in the current upload.</p>
+<p>Click <strong>Edit Metadata of All Entries</strong>.</p>
+<figure>
+<p><img alt="Edit upload metadata dialog with Comments, References and Datasets fields" src="../../assets/screenshots/upload/edit-metadata-dialog.png" />
+  </p>
+<figcaption>The Edit upload metadata dialog, applying metadata to all selected entries at once.</figcaption>
+</figure>
+<p>The metadata entered here is shared across every entry in the upload.</p>
+<p><strong>Comments</strong></p>
+<p>The <strong>Comments</strong> field accepts free-text information describing the upload or publication.</p>
+<p><strong>References</strong></p>
+<p>The <strong>References</strong> field is recommended for recording information that applies to the entire upload, including:</p>
+<ul>
+<li>ORCID identifiers for the main author and co-authors</li>
+<li>Publication DOI entered as a resolvable URL (e.g. https://doi.org/10.1038/s41557-019-0304-z that resolves directly to the publication journal and the published work)</li>
+<li>External database URLs pointing straight to the crystal structure infromation (e.g. https://www.ccdc.cam.ac.uk/structures/Search?Ccdcid=1847785&amp;DatabaseToSearch=Published)</li>
+<li>Other reference links relevant to the uploaded work</li>
+</ul>
+<p>Where individual structures have different external database structure identifiers, those should instead be recorded in the <code>metadata_info.csv</code> file instead for clarity.</p>
+<p><strong>Datasets</strong></p>
+<p>The dialog also allows entries to be grouped into datasets.</p>
+<p>You may:</p>
+<ul>
+<li>create a new dataset</li>
+<li>assign entries to an existing dataset</li>
+</ul>
+<p>As described in the <a href="../datasets/">Datasets</a> section, we recommend using the publication title as the dataset name followed by the DOI in brackets where applicable.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>Higher Magnetic Fields, Finer MOF Structural Information (10.1021/jacs.0c02810)
+</code></pre></div>
+<hr />
+<h2 id="upload-members-and-visibility">Upload members and visibility<a class="headerlink" href="#upload-members-and-visibility" title="Permanent link">&para;</a></h2>
+<p>By default, uploads are private until published. Additional collaborators may be added before publication. Click <strong>Edit Upload Members</strong>.</p>
+<figure>
+<p><img alt="Edit upload members dialog" src="../../assets/screenshots/upload/edit-upload-members.png" />
+  </p>
+<figcaption>The Edit upload members dialog: search for an existing user, or invite a new one.</figcaption>
+</figure>
+<p>Users who already have CCP-NC database accounts can be searched and added directly. If a collaborator has not yet registered, use <strong>Invite New User</strong> to send an invitation. Once added, collaborators can work on the upload alongside the main author.</p>
+<p>Visibility of the upload can also be controlled from this stage. Publication embargoes are configured during the final publishing step.</p>
+<hr />
+<h2 id="publishing-your-upload">Publishing your upload<a class="headerlink" href="#publishing-your-upload" title="Permanent link">&para;</a></h2>
+<p>Once all files have been processed and metadata has been completed, proceed to <strong>Step 5 – Publish</strong>.</p>
+<p>An embargo period may optionally be applied before publication.</p>
+<figure>
+<p><img alt="Publish step with the embargo period dropdown open" src="../../assets/screenshots/upload/publish-embargo-dropdown.png" />
+  </p>
+<figcaption>The embargo period dropdown: No embargo, or 3 to 36 months.</figcaption>
+</figure>
+<p>Embargoes of up to <strong>36 months</strong> are supported.</p>
+<p>By default, NOMAD currently applies the <strong>CC BY 4.0</strong> licence during publication. Future CCP-NC releases will provide additional licence customisation. In the meantime, authors should record their intended licence within the uploaded metadata so that it remains searchable and is included when processed data are exported.</p>
+<p>Click <strong>Publish</strong> to begin publication. A confirmation dialog is displayed.</p>
+<figure>
+<p><img alt="Confirmation dialog before publishing" src="../../assets/screenshots/upload/confirm-publish-dialog.png" />
+  </p>
+<figcaption>The publish confirmation dialog, warning that the upload cannot be removed and its files cannot be changed afterwards.</figcaption>
+</figure>
+<p>Select <strong>Publish</strong> again to continue. Publication may take several moments depending on upload size. Once publication completes:</p>
+<ul>
+<li>the upload icon changes from red to a blue globe</li>
+<li>the upload becomes publicly accessible (subject to any embargo)</li>
+<li>uploaded files can no longer be modified</li>
+</ul>
+<figure>
+<p><img alt="Published upload showing the blue globe icon" src="../../assets/screenshots/upload/publish-successful.png" />
+  </p>
+<figcaption>A published upload: the icon changes to a blue globe, and a notice confirms the files can no longer be modified.</figcaption>
+</figure>
+<div class="admonition warning">
+<p class="admonition-title">Publication is permanent</p>
+<p>After publication, uploaded files and entries become immutable through the user interface.</p>
+<p>If a published upload requires correction, removal or other administrative changes, please contact the <a href="../../reference/support/">CCP-NC database administrators</a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../results/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Viewing Results">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Viewing Results
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../datasets/" class="md-footer__link md-footer__link--next" aria-label="Next: Datasets">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Datasets
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow", "toc.integrate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

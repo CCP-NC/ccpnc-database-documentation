@@ -1,0 +1,70 @@
+/* Boxed panels for the left nav and right table-of-contents columns */
+.md-sidebar--primary,
+.md-sidebar--secondary {
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.3rem;
+  padding: 0.8rem 1rem;
+  height: fit-content;
+}
+
+.md-sidebar--primary {
+  margin-right: 0.5rem;
+}
+
+.md-sidebar--secondary {
+  margin-left: 0.5rem;
+}
+
+/* Side-by-side figure pairs, each with its own caption */
+.figure-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.figure-row figure {
+  flex: 0 1 auto;
+  max-width: 45%;
+  margin: 0;
+}
+
+.figure-row img {
+  max-height: 480px;
+  width: auto;
+}
+
+/* Widen figure captions to the full figure width instead of Material's narrow default,
+   keep them centered, and style them distinctly so they don't read as body text */
+.md-typeset figure figcaption {
+  max-width: 100%;
+  text-align: center;
+  font-style: italic;
+  font-size: 0.75rem;
+  color: var(--md-default-fg-color--light);
+  margin-top: 0.5rem;
+}
+
+/* Darker, bolder horizontal rules so section breaks (---) stand out clearly */
+.md-typeset hr {
+  border-bottom: 0.12rem solid var(--md-default-fg-color);
+}
+
+/* Responsive 16:9 YouTube embeds for the Video Tutorials page */
+.video-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 1rem 0;
+}
+
+.video-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 0.2rem;
+}

@@ -1,0 +1,1207 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="User documentation for the CCP-NC Magres Database (NOMAD Oasis)">
+      
+      
+      
+        <link rel="canonical" href="https://ccp-nc.github.io/ccpnc-database-documentation/fair-nmr-data/">
+      
+      
+        <link rel="prev" href="../user-guide/datasets/">
+      
+      
+        <link rel="next" href="../video-tutorials/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>FAIR NMR Data - CCP-NC Magres Database</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#best-practices-for-fair-management-of-computed-nmr-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="CCP-NC Magres Database" class="md-header__button md-logo" aria-label="CCP-NC Magres Database" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CCP-NC Magres Database
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FAIR NMR Data
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CCP-NC/ccpnc-database-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CCP-NC/ccpnc-database-documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../getting-started/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../user-guide/search/" class="md-tabs__link">
+          
+  
+  
+  User Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAIR NMR Data
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../video-tutorials/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Video Tutorials
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../reference/faq/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../reference/support/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Support
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="CCP-NC Magres Database" class="md-nav__button md-logo" aria-label="CCP-NC Magres Database" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CCP-NC Magres Database
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CCP-NC/ccpnc-database-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CCP-NC/ccpnc-database-documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    User Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-guide/search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Searching the Database
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-guide/results/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Viewing Results
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-guide/upload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uploading Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-guide/datasets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datasets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAIR NMR Data
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAIR NMR Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#from-magres-to-fair-nmr-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From Magres to FAIR NMR data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="From Magres to FAIR NMR data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-retain-the-full-calculated-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why retain the full calculated quantities?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connecting-nmr-quantities-to-atomic-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connecting NMR quantities to atomic structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preserve-computational-provenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preserve computational provenance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-common-nmr-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A common NMR schema
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fair-data-infrastructure-through-nomad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAIR data infrastructure through NOMAD
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-ccp-nc-database-supports-fair-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the CCP-NC Database supports FAIR principles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How the CCP-NC Database supports FAIR principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#findable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Findable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessible
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interoperable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interoperable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reusable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reusable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fair-data-as-a-continuing-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAIR data as a continuing process
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../video-tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Video Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="best-practices-for-fair-management-of-computed-nmr-data">Best Practices for FAIR Management of Computed NMR Data<a class="headerlink" href="#best-practices-for-fair-management-of-computed-nmr-data" title="Permanent link">&para;</a></h1>
+<p>Computational NMR calculations can produce scientifically valuable data long after they were originally generated. Calculated properties such as magnetic shielding tensors and electric field gradients can be reused for comparison with experiment, re-analysis, benchmarking and machine-learning applications. To make such reuse meaningful, these properties should be retained together with the atomic structure on which they were calculated and sufficient computational provenance for another researcher or software tool to interpret how they were obtained.</p>
+<p>This page describes the practices adopted by the CCP-NC database to support FAIR management of computed solid-state NMR data and provides recommendations for researchers preparing to deposit data in our database.</p>
+<hr />
+<h2 id="from-magres-to-fair-nmr-data">From Magres to FAIR NMR data<a class="headerlink" href="#from-magres-to-fair-nmr-data" title="Permanent link">&para;</a></h2>
+<p>The current CCP-NC database workflow is centred on the <strong>magres file format</strong>, a community format developed specifically for exchanging and archiving results from first-principles calculations of NMR parameters.</p>
+<p>The magres specification was designed as both an archival and data-processing format. Rather than storing only derived values such as an isotropic shielding, a magres file can retain the underlying atomic structure and calculated NMR tensors in a precisely defined representation.</p>
+<p>The specification separates the information into three principal areas:</p>
+<ul>
+<li>the <strong>atomic structure</strong>, including atomic coordinates, lattice vectors and, symmetry;</li>
+<li>the <strong>calculated magnetic resonance quantities</strong> associated with individual atomic sites such as magnetic shielding and electric field gradient or with pairs of sites such as spin-spin coupling;</li>
+<li><strong>calculation metadata</strong> describing how the quantities were obtained.</li>
+</ul>
+<p>See the <a href="https://www.ccpnc.ac.uk/docs/magres/magres-format.pdf">magres file-format specification</a> for the complete definition of the format.</p>
+<h3 id="why-retain-the-full-calculated-quantities">Why retain the full calculated quantities?<a class="headerlink" href="#why-retain-the-full-calculated-quantities" title="Permanent link">&para;</a></h3>
+<p>For FAIR data management, calculated NMR data should, where possible, retain the full quantities produced by the calculation rather than only derived values used for a particular analysis.</p>
+<p>For example, the magres specification represents magnetic shielding as a complete rank-2 tensor associated with an atomic site. Isotropic shielding can subsequently be derived from this tensor, whereas storing only the isotropic value discards information contained in the full tensor. The same principle applies to electric field gradients and indirect spin-spin couplings.</p>
+<p>The principal quantities defined by the magres specification include:</p>
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Magres representation</th>
+<th>Standard magres unit</th>
+<th>Scientific context retained</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Atomic positions</td>
+<td>Cartesian coordinates associated with labelled atomic sites</td>
+<td>Å</td>
+<td>Connects calculated NMR properties to specific atoms in the structure</td>
+</tr>
+<tr>
+<td>Lattice vectors</td>
+<td>Three unit-cell vectors</td>
+<td>Å</td>
+<td>Defines the periodic structure associated with the calculation</td>
+</tr>
+<tr>
+<td>Magnetic shielding</td>
+<td>Full rank-2 shielding tensor for each atomic site</td>
+<td>ppm</td>
+<td>Preserves the calculated shielding tensor from which isotropic and tensor-derived quantities can be obtained</td>
+</tr>
+<tr>
+<td>Electric field gradient</td>
+<td>Symmetric, traceless rank-2 tensor for each atomic site</td>
+<td>Hartree atomic units</td>
+<td>Preserves the calculated EFG required for interpreting quadrupolar interactions</td>
+</tr>
+<tr>
+<td>Indirect spin-spin coupling</td>
+<td>Reduced coupling tensor between pairs of atomic sites</td>
+<td>10^19 T² J⁻¹</td>
+<td>Stores the isotope-independent reduced coupling from which J coupling can be obtained when nuclear gyromagnetic ratios are specified</td>
+</tr>
+<tr>
+<td>Macroscopic magnetic susceptibility</td>
+<td>Rank-2 tensor</td>
+<td>10⁻⁶ cm³ mol⁻¹</td>
+<td>Preserves the calculated bulk magnetic response where supplied</td>
+</tr>
+</tbody>
+</table>
+<p>The explicit use of units is an important part of the magres specification. Units are declared alongside the corresponding quantities so that their physical meaning does not depend on undocumented assumptions made by the software reading the file.</p>
+<p>For indirect spin-spin coupling, magres stores the reduced coupling tensor rather than the isotope-specific J-coupling tensor. The reduced coupling is independent of the nuclear gyromagnetic ratios, allowing the corresponding J-coupling to be calculated for the required isotopes when those are specified.</p>
+<div class="admonition info">
+<p class="admonition-title">Preserve the calculation, not only the plotted result</p>
+<p>Wherever possible, deposit the original magres data containing the structure and full calculated tensors rather than only selected or derived values.</p>
+</div>
+<h3 id="connecting-nmr-quantities-to-atomic-structure">Connecting NMR quantities to atomic structure<a class="headerlink" href="#connecting-nmr-quantities-to-atomic-structure" title="Permanent link">&para;</a></h3>
+<p>Atomic positions and calculated NMR quantities in a magres file are linked through common site labels. CCP-NC preserves these labels during parsing, maintaining the association between each NMR quantity and its corresponding atomic site while providing traceability back to the original magres file. For periodic structures, lattice vectors are retained to preserve the unit-cell context.</p>
+<h3 id="preserve-computational-provenance">Preserve computational provenance<a class="headerlink" href="#preserve-computational-provenance" title="Permanent link">&para;</a></h3>
+<p>A calculated NMR quantity depends on both the atomic structure and the computational method used to obtain it. The magres calculation block can record provenance such as the electronic-structure code and version, pseudopotentials, plane-wave cutoff, k-point sampling and other relevant calculation parameters. The amount of information present can vary between magres files, so retaining the original calculation files and providing relevant computational metadata is recommended.</p>
+<hr />
+<h2 id="a-common-nmr-schema">A common NMR schema<a class="headerlink" href="#a-common-nmr-schema" title="Permanent link">&para;</a></h2>
+<p>A file-format specification defines how information is exchanged between programs. A searchable FAIR repository additionally requires that this information has a consistent <strong>machine-readable meaning inside the database</strong>.</p>
+<p>For this reason, CCP-NC development has contributed to a dedicated <a href="https://github.com/FAIRmat-NFDI/nomad-schema-plugin-nmr">NOMAD NMR schema plugin</a>, which provides shared schema classes for NMR metadata.</p>
+<p>NOMAD schemas define scientific information using named sections and quantities with defined properties such as:</p>
+<ul>
+<li>data type;</li>
+<li>shape;</li>
+<li>physical unit;</li>
+<li>description;</li>
+<li>relationships to other sections of the data model.</li>
+</ul>
+<p>The CCP-NC magres workflow maps information extracted from magres files into this structured representation rather than treating the uploaded file as an opaque document. The schema explicitly defines what each quantity represents, its dimensionality and unit, and its relationship to the corresponding atom or calculation. The original magres file is retained as source data, while the parsed representation can be explored, searched and exported within the database.</p>
+<hr />
+<h2 id="fair-data-infrastructure-through-nomad">FAIR data infrastructure through NOMAD<a class="headerlink" href="#fair-data-infrastructure-through-nomad" title="Permanent link">&para;</a></h2>
+<p>The CCP-NC database is implemented as a customised <strong>NOMAD Oasis</strong>. NOMAD is an open-source materials-science data-management platform specifically designed to transform heterogeneous scientific files into structured, machine-actionable data.</p>
+<p>NOMAD provides clear distinction between the <strong>raw files</strong> supplied by a researcher and the <strong>processed data</strong> generated by parsers and normalisation.</p>
+<p>For a recognised file format, a parser extracts scientific information from the source files and maps it into the appropriate data model. Processed data follow a defined schema and can therefore be searched, visualised, queried through APIs and exported in a common representation regardless of how the information appeared in the original source file.</p>
+<p>For the CCP-NC community, this provides two complementary levels of preservation:</p>
+<ol>
+<li><strong>Original research data</strong> — the uploaded magres and associated files remain available for download.</li>
+<li><strong>Structured data</strong> — scientifically relevant quantities are parsed into a common schema for search, exploration and programmatic reuse.</li>
+</ol>
+<p>See the <a href="https://docs.nomad-lab.eu/">NOMAD documentation</a> for further information about the underlying data-management infrastructure.</p>
+<hr />
+<h2 id="how-the-ccp-nc-database-supports-fair-principles">How the CCP-NC Database supports FAIR principles<a class="headerlink" href="#how-the-ccp-nc-database-supports-fair-principles" title="Permanent link">&para;</a></h2>
+<h3 id="findable">Findable<a class="headerlink" href="#findable" title="Permanent link">&para;</a></h3>
+<p>A FAIR dataset should be discoverable from scientifically meaningful information rather than requiring a user to already know the filename or location of the data. The CCP-NC database indexes structured metadata that allow records to be located using properties including:</p>
+<ul>
+<li>material name and chemical composition</li>
+<li>elements and chemical formula</li>
+<li>electronic-structure code and version</li>
+<li>exchange-correlation functional</li>
+<li>author and dataset</li>
+<li>publication DOI</li>
+<li>external crystallographic database identifiers</li>
+<li>data-distribution licence</li>
+<li>site-resolved magnetic shielding ranges</li>
+<li>site-resolved electric field gradient ranges</li>
+</ul>
+<p>NMR-specific quantities can therefore participate directly in data discovery. For example, records can be located according to the calculated shielding range of a particular element rather than only by bibliographic metadata.</p>
+<p>Grouping related records into datasets and associating them with publications further improves discovery of complete computational studies.</p>
+<div class="admonition tip">
+<p class="admonition-title">Best practice</p>
+</div>
+<p>Provide publication DOIs and external database identifiers where applicable, and group calculations belonging to the same publication or study into a dataset. Complete descriptive metadata make deposited calculations easier for others to discover.</p>
+<hr />
+<h3 id="accessible">Accessible<a class="headerlink" href="#accessible" title="Permanent link">&para;</a></h3>
+<p>Published CCP-NC records can be explored through the web interface, including their atomic structure, NMR parameters, computational provenance, associated files, datasets and publication metadata.</p>
+<p>The original uploaded files can be downloaded for direct reuse, while processed data can be exported as structured JSON. The NOMAD infrastructure of the database also provides programmatic access to processed data through its APIs, enabling computational analysis without requiring data to be manually copied from individual web pages.</p>
+<p>Where data should not become immediately public, the publication workflow also supports controlled collaboration and embargo before public release.</p>
+<div class="admonition tip">
+<p class="admonition-title">Best practice</p>
+</div>
+<p>Retain and deposit the original magres files rather than only extracted tables or selected derived quantities. Before publication, check the parsed records, metadata and processing logs to ensure that the intended data are accessible and correctly represented.</p>
+<hr />
+<h3 id="interoperable">Interoperable<a class="headerlink" href="#interoperable" title="Permanent link">&para;</a></h3>
+<p>Interoperability is particularly important for computational NMR because equivalent physical quantities may originate from different electronic-structure codes and may otherwise be represented using different program-specific output formats. CCP-NC addresses this at several levels.</p>
+<p>The magres format provides a common exchange representation for computed NMR quantities. The NMR schema provides a common machine-readable data model. The database then provides a common archive representation through which processed data can be queried independently of the original file syntax.</p>
+<p>As a result, downstream tools do not necessarily need to understand every original electronic structure output format in order to work with the structured NMR data.</p>
+<p>NOMAD's architecture also supports parsers for many atomistic simulation codes. The CCP-NC database workflow currently focuses on magres as the common NMR representation, while integration with the wider computational workflows is an area of continuing development.</p>
+<div class="admonition tip">
+<p class="admonition-title">Best practice</p>
+</div>
+<p>Preserve NMR quantities using the definitions, units and conventions of the magres specification. Retain full calculated tensors where available rather than only derived scalar quantities, so that information required by other analysis tools and workflows is not discarded.</p>
+<hr />
+<h3 id="reusable">Reusable<a class="headerlink" href="#reusable" title="Permanent link">&para;</a></h3>
+<p>Data become reusable when another researcher can determine what they represent, their origin and under what conditions they may be used.</p>
+<p>CCP-NC retains calculated NMR data together with their structural context, computational provenance and descriptive metadata. Publication and external database identifiers connect records to related scientific resources, while explicit data-distribution licences establish the conditions under which deposited data can be reused.</p>
+<p>Preserving this context allows the same calculation to support uses beyond those anticipated by the original author, including comparison between computational methods, validation against experiment, statistical analysis, development of new analysis tools and construction of machine-learning datasets.</p>
+<div class="admonition tip">
+<p class="admonition-title">Best practice</p>
+</div>
+<p>Provide sufficient structural and computational provenance for somebody outside your research group to understand how the NMR results were obtained. Record the relevant calculation method and parameters, preserve the link between NMR quantities and their atomic sites, and specify an appropriate data-distribution licence.</p>
+<hr />
+<h2 id="fair-data-as-a-continuing-process">FAIR data as a continuing process<a class="headerlink" href="#fair-data-as-a-continuing-process" title="Permanent link">&para;</a></h2>
+<p>FAIR data management extends beyond depositing files in a repository. The aim is to ensure that computed NMR data remain discoverable, interpretable and reusable by researchers and software beyond the original study for which they were generated.</p>
+<p>The CCP-NC database provides the infrastructure to support this, while the quality and completeness of deposited data and metadata remain an important responsibility of the depositors and part of good FAIR data practice.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../user-guide/datasets/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Datasets">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Datasets
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../video-tutorials/" class="md-footer__link md-footer__link--next" aria-label="Next: Video Tutorials">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Video Tutorials
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow", "toc.integrate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
