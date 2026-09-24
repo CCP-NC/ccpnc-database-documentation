@@ -1,0 +1,1991 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="User documentation for the CCP-NC Magres Database (NOMAD Oasis)">
+      
+      
+      
+        <link rel="canonical" href="https://ccp-nc.github.io/ccpnc-database-documentation/user-guide/search/">
+      
+      
+        <link rel="prev" href="../../getting-started/">
+      
+      
+        <link rel="next" href="../results/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Searching the Database - CCP-NC Magres Database</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#searching-the-database" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CCP-NC Magres Database" class="md-header__button md-logo" aria-label="CCP-NC Magres Database" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CCP-NC Magres Database
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Searching the Database
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CCP-NC/ccpnc-database-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CCP-NC/ccpnc-database-documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../getting-started/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  User Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../fair-nmr-data/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAIR NMR Data
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../video-tutorials/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Video Tutorials
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../reference/faq/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../reference/support/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Support
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CCP-NC Magres Database" class="md-nav__button md-logo" aria-label="CCP-NC Magres Database" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CCP-NC Magres Database
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CCP-NC/ccpnc-database-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CCP-NC/ccpnc-database-documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    User Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Searching the Database
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Searching the Database
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-search-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding the Search Interface
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-the-search-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        About the Search Tools
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-results-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Search Results Table
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Search Results Table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#customising-displayed-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customising Displayed Columns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sorting-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sorting Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Search Fields
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#searching-worked-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Searching - Worked Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Searching - Worked Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#material-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Material Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-name-dft-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program name (DFT Code)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dft-code-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DFT Code Version
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chemical-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chemical Formula
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-by-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Search by Elements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#author" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Author
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#immutable-id-magres-unique-identifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Immutable ID (Magres unique identifier)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External Database
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publication-doi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publication DOI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-distribution-licence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data distribution licence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exchange-correlation-functional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exchange-Correlation Functional
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#site-resolved-magnetic-shielding-isotropy-iso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Site-resolved Magnetic Shielding Isotropy (σiso)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#site-resolved-electric-field-gradient-vzz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Site-resolved Electric Field Gradient (Vzz)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#known-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Known Limitations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Known Limitations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#equality-versus-free-text-searches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Equality versus Free-text Searches
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#short-chemical-formulae" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Short Chemical Formulae
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#author-searches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Author Searches
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exchange-correlation-functional-searches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exchange-Correlation Functional Searches
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numerical-nmr-parameter-searches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Numerical NMR Parameter Searches
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ongoing-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ongoing Development
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../results/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Viewing Results
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uploading Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datasets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datasets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fair-nmr-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAIR NMR Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../video-tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Video Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="searching-the-database">Searching the Database<a class="headerlink" href="#searching-the-database" title="Permanent link">&para;</a></h1>
+<p>You can search and explore the database with or without a user account — see <a href="../../getting-started/#accessing-the-database">Accessing the Site</a>.</p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The CCP-NC Database provides several complementary methods for discovering computational NMR records. Depending on the information already available to you, searches can be performed using structured metadata filters, the global search bar or the interactive periodic table.</p>
+<p>Many searchable fields are accessible using more than one search tool. Throughout this guide, the recommended workflow for each search field is explained together with worked examples, helping you choose the most effective search method for your particular task.</p>
+<p>To get to the search workspace from the landing page, click</p>
+<blockquote>
+<p><strong>Explore</strong> → <strong>CCP-NC NMR APP</strong></p>
+</blockquote>
+<p>to reach the specially customised NMR Crystallography dashboard.</p>
+<figure>
+<p><img alt="Explore menu showing the CCP-NC NMR App option" src="../../assets/screenshots/search/explore_ccpnc-nmr-app.png" />
+  </p>
+<figcaption>The Explore menu, listing Simulation and the CCP-NC NMR App.</figcaption>
+</figure>
+<hr />
+<h2 id="understanding-the-search-interface">Understanding the Search Interface<a class="headerlink" href="#understanding-the-search-interface" title="Permanent link">&para;</a></h2>
+<p>The search workspace is organised into four main components:</p>
+<ol>
+<li><strong>Search filter panel</strong>, used for filtering structured metadata and numerical ranges.</li>
+<li><strong>Global search bar</strong>, used for constructing flexible metadata queries through the NOMAD search interface.</li>
+<li><strong>Interactive periodic table</strong>, used for filtering records according to their elemental composition.</li>
+<li><strong>Search results table</strong>, which displays the records matching the current search criteria.</li>
+</ol>
+<figure>
+<p><img alt="The search interface with its four main components labelled" src="../../assets/screenshots/search/search-interface-labelled.png" />
+  </p>
+<figcaption>The four main components of the search workspace: (1) the search filter panel, (2) the global search bar, (3) the interactive periodic table, and (4) the search results table.</figcaption>
+</figure>
+<p>These components work together and can be used independently or in combination to progressively narrow your search results.</p>
+<hr />
+<h2 id="about-the-search-tools">About the Search Tools<a class="headerlink" href="#about-the-search-tools" title="Permanent link">&para;</a></h2>
+<p>The CCP-NC Database offers multiple ways to search the same underlying metadata, allowing users to choose the approach best suited to the information they already have.</p>
+<p>The <strong>search filter panels</strong> and <strong>interactive periodic table</strong> provide intuitive graphical interfaces for filtering records and generally require little explanation. Worked examples demonstrating these tools are included throughout the relevant sections of this guide.</p>
+<p>The <strong>global search bar</strong> provides greater flexibility by allowing searches to be constructed directly from the metadata stored within each database record. Although the exact search differs depending on the field being queried, the general workflow remains consistent:</p>
+<ol>
+<li>Begin typing the name of the metadata field you wish to search.</li>
+<li>Select the appropriate field from the autocomplete suggestions.</li>
+<li>After selecting the field, enter an <strong>equals sign</strong> (<code>=</code>) followed by the value you wish to search for. Where available, the search bar will provide autocomplete suggestions for matching values.</li>
+<li>Choose the appropriate search type (for example, <strong>Equality</strong> or <strong>Free-text</strong>, where available).</li>
+<li>Review the matching records returned by the search.</li>
+</ol>
+<p>The precise sequence of selections and available search options varies slightly between metadata fields. Rather than attempting to describe every possible variation here, the following sections provide worked examples for each searchable field, demonstrating the complete search workflow together with the recommended search method.</p>
+<hr />
+<h2 id="search-results-table">Search Results Table<a class="headerlink" href="#search-results-table" title="Permanent link">&para;</a></h2>
+<p>The search results table displays all records matching the current search criteria.</p>
+<p>Each row represents an individual computational NMR record and provides a summary of its metadata. By default, the following columns are displayed:</p>
+<ul>
+<li>Chemical Name</li>
+<li>Unit Cell Formula</li>
+<li>Upload Time</li>
+<li>Main Author</li>
+</ul>
+<p>These columns were selected to provide a concise overview of each record while keeping the results table easy to scan.</p>
+<figure>
+<p><img alt="Default results table with the column configuration menu open" src="../../assets/screenshots/search/results-sortable-columns-new.png" />
+  </p>
+<figcaption>The default results table (Chemical Name, Unit Cell Formula, Upload Time, Main Author), shown with the column configuration menu open to reveal the full set of optional columns.</figcaption>
+</figure>
+<h3 id="customising-displayed-columns">Customising Displayed Columns<a class="headerlink" href="#customising-displayed-columns" title="Permanent link">&para;</a></h3>
+<p>The displayed columns can be customised to show additional metadata relevant to your search.</p>
+<p>Select the <strong>column configuration</strong> button (<img alt="column configuration icon" src="../../assets/screenshots/search/icon-column-config.png" style="vertical-align:middle" width="26" />) on the top right of the results table to open the list of available column choices.</p>
+<p>Tick or untick individual checkboxes to control which metadata fields are displayed. Changes are applied immediately without needing to repeat the search.</p>
+<p>The following optional columns are currently supported:</p>
+<ul>
+<li>Magres Immutable ID (legacy records only)</li>
+<li>DFT Code</li>
+<li>DFT Code Version</li>
+<li>Data Distribution License</li>
+<li>External Database</li>
+<li>External Database Reference Code</li>
+<li>Publication DOI</li>
+<li>Dataset</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tailor the results table to your workflow</p>
+<p>If you frequently search using a particular metadata field, consider enabling the corresponding column. This allows matching values to be reviewed directly from the search results without opening every individual record.</p>
+</div>
+<p>For example:</p>
+<ul>
+<li>Enable <strong>DFT Code</strong> and <strong>DFT Code Version</strong> when comparing calculations performed using different electronic structure codes.</li>
+<li>Enable <strong>External Database</strong> and <strong>External Database Reference Code</strong> when comparing CCP-NC records with entries in external crystallographic databases.</li>
+</ul>
+<h3 id="sorting-results">Sorting Results<a class="headerlink" href="#sorting-results" title="Permanent link">&para;</a></h3>
+<p>Some columns support sorting.</p>
+<p>Where available, cicking the column heading sorts the search results in ascending or descending order. The current sort direction is indicated by the arrow displayed beside the column name.</p>
+<p>This can be particularly useful when reviewing recently uploaded records by sorting the <strong>Upload Time</strong> column, for example, as seen in the figure above.</p>
+<div class="admonition note">
+<p class="admonition-title">Ongoing development</p>
+<p>The available columns and sorting options may evolve as additional metadata fields and search capabilities are introduced in future releases of the CCP-NC Database.</p>
+</div>
+<hr />
+<h2 id="search-fields">Search Fields<a class="headerlink" href="#search-fields" title="Permanent link">&para;</a></h2>
+<p>The table below organises every single metadata field by which you can filter the database records. The second and third columns show whether the field is searchable via the filter panel menu on the screen left or the global search bar at the top of the screen, using tick marks. The fourth column shows the most recommended method to search the particular field. The subsequent sections contain worked example screenshots for each field, which you can refer to independently.</p>
+<table>
+<thead>
+<tr>
+<th>Search Field</th>
+<th>Filter Panel</th>
+<th>Search Bar</th>
+<th>Recommended Method</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Material Name</td>
+<td>✓</td>
+<td>✓</td>
+<td>Filter panel for exact names; search bar for partial names</td>
+<td>Free-text supported</td>
+</tr>
+<tr>
+<td>DFT Code</td>
+<td>✓</td>
+<td>✓</td>
+<td>Equality</td>
+<td>Filter panel recommended</td>
+</tr>
+<tr>
+<td>Program Version</td>
+<td>✓</td>
+<td>✓</td>
+<td>Equality</td>
+<td>Exact version</td>
+</tr>
+<tr>
+<td>Chemical Formula</td>
+<td>✓</td>
+<td>✓</td>
+<td>Equality</td>
+<td>Avoid free-text for short formulae</td>
+</tr>
+<tr>
+<td>Elements</td>
+<td>✓</td>
+<td>✓</td>
+<td>Filter panel / Periodic Table</td>
+<td>Composition search</td>
+</tr>
+<tr>
+<td>Author</td>
+<td>✓</td>
+<td>✓</td>
+<td>Equality</td>
+<td>Filter panel preferred</td>
+</tr>
+<tr>
+<td>Immutable ID</td>
+<td>✓</td>
+<td>✓</td>
+<td>Equality</td>
+<td>Seven-digit identifier</td>
+</tr>
+<tr>
+<td>External Database</td>
+<td>✓</td>
+<td>✓</td>
+<td>Equality</td>
+<td>Lowercase names</td>
+</tr>
+<tr>
+<td>External Database Reference Code</td>
+<td>✓</td>
+<td>✓</td>
+<td>Depends</td>
+<td>REFCODE behaviour differs</td>
+</tr>
+<tr>
+<td>Publication DOI</td>
+<td>✓</td>
+<td>✓</td>
+<td>Equality</td>
+<td>Free-text for DOI fragments</td>
+</tr>
+<tr>
+<td>Licence</td>
+<td>✓</td>
+<td>Not recommended</td>
+<td>Filter panel</td>
+<td>Exact value required for search bar</td>
+</tr>
+<tr>
+<td>XC Functional</td>
+<td>✓</td>
+<td>✓</td>
+<td>Equality</td>
+<td>Avoid substring matches</td>
+</tr>
+<tr>
+<td>Magnetic Shielding</td>
+<td>✓</td>
+<td>Limited</td>
+<td>Filter panel</td>
+<td>Histogram search</td>
+</tr>
+<tr>
+<td>Electric Field Gradient (Vzz)</td>
+<td>✓</td>
+<td>Limited</td>
+<td>Filter panel</td>
+<td>Histogram search</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="searching-worked-examples">Searching - Worked Examples<a class="headerlink" href="#searching-worked-examples" title="Permanent link">&para;</a></h2>
+<h3 id="material-name">Material Name<a class="headerlink" href="#material-name" title="Permanent link">&para;</a></h3>
+<p>Material names provide one of the simplest ways of locating records within the CCP-NC Database. Searches may be performed using either the <strong>Material Properties</strong> filter panel or the <strong>Global Search Bar</strong>, depending on whether the complete material name or only part of the name is known.</p>
+<p>Material names are stored exactly as supplied by the dataset author. Consequently, IUPAC names, common names and author-specific naming conventions are all searchable.</p>
+<p><strong>Search using the Filter Panel</strong></p>
+<p>The <strong>Material Properties</strong> filter is located at the top of the search filter panel. There is no search text box in this filter menu for seraching material properties. The material list is ordered by the frequency with which each material occurs in the database, with the most common entries appearing first. Use checkboxes for quickly filtering materials by name. Users may click <code>SHOW MORE</code> to further expand the list and <code>SHOW LESS</code> later to contract it.</p>
+<figure>
+<p><img alt="Material Properties filter panel" src="../../assets/screenshots/search/filter-material-properties.png" />
+  </p>
+<figcaption>The Material Properties filter, listing chemical names ordered by frequency of occurrence, with a "SHOW MORE" link to expand the list.</figcaption>
+</figure>
+<p><strong>Search using the Global Search Bar</strong></p>
+<p>Begin typing <code>chemical name</code> in the Global Search Bar and select the metadata field <code>data.ccpnc_metadata.material_properties.chemical_name</code> from the autocomplete suggestions.</p>
+<figure>
+<p><img alt="Choosing the chemical name field in the search bar" src="../../assets/screenshots/search/search-bar-chemical-name-name-choose.png" />
+  </p>
+<figcaption>Selecting the <code>data.ccpnc_metadata.material_properties.chemical_name</code> field from the autocomplete suggestions after typing "chemical name".</figcaption>
+</figure>
+<p>After selecting the field, enter an equals sign (<code>=</code>) followed by the search term.</p>
+<p>If only part of the material name is known, select <strong>Free-text</strong> search. Free-text searches are particularly useful when searching for common fragments of long IUPAC names and materials with common names.</p>
+<p>For example, searching for:</p>
+<p><code>methyl</code></p>
+<p>returns records containing terms such as:</p>
+<ul>
+<li>methyl</li>
+<li>dimethyl</li>
+<li>methylphenyl</li>
+</ul>
+<p>Wildcard searches may also be used where appropriate.</p>
+<p>For example,</p>
+<p><code>methyl*</code></p>
+<p>restricts matches to occurrences beginning with <em>methyl</em>, although punctuation used within IUPAC names means wildcard behaviour should be interpreted with care.</p>
+<figure>
+<p><img alt="Free-text search for methyl with wildcard" src="../../assets/screenshots/search/search-bar-chemical-name-free-text.png" />
+  </p>
+<figcaption>A free-text search for <code>methyl*</code>, restricting matches to names beginning with "methyl".</figcaption>
+</figure>
+<figure>
+<p><img alt="Search results for the free-text methyl wildcard search" src="../../assets/screenshots/search/search-bar-chemical-name-free-text-search-results.png" />
+  </p>
+<figcaption>The 388 matching records returned by the free-text <code>methyl*</code> search.</figcaption>
+</figure>
+<p>Where the exact material name is known, select <strong>Equality</strong> search and enter the complete string following the <code>=</code> sign. For example, an entry such as:</p>
+<p><code>2-(((2,3-Dihydroxypropyl)iminio)methyl)-4-nitrophenolate</code></p>
+<p>must be entered substantially as stored in the database.</p>
+<figure>
+<p><img alt="Equality search using the full IUPAC chemical name" src="../../assets/screenshots/search/search-bar-chemical-name-equality.png" />
+  </p>
+<figcaption>An equality search using the complete name, as stored in the database.</figcaption>
+</figure>
+<figure>
+<p><img alt="Search result for the equality chemical name search" src="../../assets/screenshots/search/search-bar-chemical-name-equality-search-results.png" />
+  </p>
+<figcaption>The single, exact-match record returned by the equality search.</figcaption>
+</figure>
+<p><strong>Best Practice</strong></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use the <strong>Filter Panel</strong> when the material name is known and found with high frequency in the database.</p>
+<p>Use the <strong>Global Search Bar</strong> when only part of the material name is available or when searching long systematic names.</p>
+</div>
+<hr />
+<h3 id="program-name-dft-code">Program name (DFT Code)<a class="headerlink" href="#program-name-dft-code" title="Permanent link">&para;</a></h3>
+<p>The CCP-NC Database allows records to be filtered according to the electronic structure code used to generate the calculation.</p>
+<p><strong>Search using the Filter Panel</strong></p>
+<p>The <strong>Filter Panel</strong> is the recommended method for filtering records by DFT code. </p>
+<p>The program name filter contains all electronic structure codes currently represented within the database and can be found under the <strong>DFT Code</strong> filter menu. Select the desired code using the available checkboxes.</p>
+<p>Results may be refined further by selecting one or more program versions. Program versions are ordered according to their frequency within the database rather than numerical order.</p>
+<figure>
+<p><img alt="DFT Code filter panel" src="../../assets/screenshots/search/filter-dft-code.png" />
+  </p>
+<figcaption>The DFT Code filter, listing program names (CASTEP, Quantum ESPRESSO) and program versions, each ordered by frequency of occurrence.</figcaption>
+</figure>
+<p><strong>Using the Global Search Bar</strong></p>
+<p>Begin typing <code>program</code> and select the metadata field <code>results.method.simulation.program_name</code> from the autocomplete suggestions.</p>
+<p>After selecting the field, enter the <code>=</code> sign followed by the required program name. Choose <strong>Equality</strong> search. Equality search is recommended because program names represent structured metadata. Remember that the equality search is case-sensitive, it is recommended to choose the entry suggested by the autocomplete feature.</p>
+<figure>
+<p><img alt="Choosing the program name field in the search bar" src="../../assets/screenshots/search/search-bar-dft-code-name.png" />
+  </p>
+<figcaption>Selecting <code>results.method.simulation.program_name</code> after typing "program".</figcaption>
+</figure>
+<figure>
+<p><img alt="Entering a program name value with equality search" src="../../assets/screenshots/search/search-bar-dft-code-name-value.png" />
+  </p>
+<figcaption>Choosing the autocomplete-suggested equality search for <code>CASTEP</code>.</figcaption>
+</figure>
+<hr />
+<h3 id="dft-code-version">DFT Code Version<a class="headerlink" href="#dft-code-version" title="Permanent link">&para;</a></h3>
+<p>Program version searches allow calculations to be restricted to a particular release of an electronic structure code.</p>
+<p><strong>Search using the Filter Panel</strong></p>
+<p>The <strong>Filter Panel</strong> is recommended for filtering records by DFT code version, just like in teh case of DFT code name filter. </p>
+<p>Program versions list is listed beneath the Program Name list under the main <strong>DFT Code</strong> filter menu. Select one or more versions using the available checkboxes. Multiple versions may be selected simultaneously to search across a version range.</p>
+<figure>
+<p><img alt="DFT Code filter panel with a name and two versions selected" src="../../assets/screenshots/search/filter-dft-code-version.png" />
+  </p>
+<figcaption>CASTEP selected as the program name, with versions 17.1 and 17.2 both checked to search across a version range.</figcaption>
+</figure>
+<p><strong>Using the Global Search Bar</strong></p>
+<p>Begin typing <code>version</code> and select the metadata field <code>results.method.simulation.program_version</code> from the autocomplete suggestions.</p>
+<p>After selecting the field, enter the <code>=</code> sign followed by the required program version number. Autocomplete suggestions display the program versions currently represented within the database, that are closest to the typed search field. Select the required value using <strong>Equality</strong> search.</p>
+<p><strong>Note:</strong> There is no direct method to implement a range filter on the program versions. Therefore, the above step has to be repeated as many times as needed to apply as many version number filters.</p>
+<figure>
+<p><img alt="Choosing the program version field in the search bar" src="../../assets/screenshots/search/search-bar-dft-code-version-name.png" />
+  </p>
+<figcaption>Selecting <code>results.method.simulation.program_version</code> after typing "version".</figcaption>
+</figure>
+<figure>
+<p><img alt="Entering a program version value with equality search" src="../../assets/screenshots/search/search-bar-dft-code-version-value1.png" />
+  </p>
+<figcaption>Applying an equality search for version <code>17.1</code>.</figcaption>
+</figure>
+<figure>
+<p><img alt="Combined program name and version filters applied" src="../../assets/screenshots/search/search-bar-dft-code-version-values-final.png" />
+  </p>
+<figcaption>The result after repeating the search bar steps: a <strong>CASTEP</strong> program name filter combined with two program version filters (<strong>17.1 OR 17.2</strong>).</figcaption>
+</figure>
+<hr />
+<h3 id="chemical-formula">Chemical Formula<a class="headerlink" href="#chemical-formula" title="Permanent link">&para;</a></h3>
+<p>Chemical formulae may be searched using either the Filter Panel or the Global Search Bar. The database supports formula searches using standard crystallographic conventions.</p>
+<p><strong>Using the interactive periodic table</strong></p>
+<p>The periodic table in the main data exploration page can be used for quickly filtering records that contain only specific elements, before the targeted formula based search.</p>
+<div class="figure-row">
+<figure>
+<p><img alt="Periodic table with Sulfur about to be selected" src="../../assets/screenshots/search/periodic-table-sulphur.png" />
+  </p>
+<figcaption>Hovering over the Sulfur tile before selecting it.</figcaption>
+</figure>
+<figure>
+<p><img alt="Periodic table with Sulfur and Chlorine both selected" src="../../assets/screenshots/search/periodic-table-sulphur-chlorine.png" />
+  </p>
+<figcaption>Results narrowed to records containing both Sulfur <strong>and</strong> Chlorine.</figcaption>
+</figure>
+</div>
+<p><strong>Using the Filter Panel</strong></p>
+<p>The filter panel offers an <strong>Elements/Formula</strong> menu where a user can search for chemical formulae in the IUPAC or Hill conventions using the search text box provided. These search fields are case-sensitive and require the search query to be exact matches. But, these search text boxes contain auto-completion suggestion feature that will offer you helpful suggestions as you start typing in the formula.</p>
+<figure>
+<p><img alt="Elements/Formula filter panel with a partial IUPAC formula typed" src="../../assets/screenshots/search/filter-elements-formula.png" />
+  </p>
+<figcaption>Typing <code>H4</code> into the Chemical Formula IUPAC box brings up matching autocomplete suggestions; the N elements histogram below is set to a min/max range of 5–6.</figcaption>
+</figure>
+<p>The filter panel also offers a histogram to further filter records by the number of constituent elements in the target material. Drag the mouse to control the sliders on the histogram directly or enter values for minimum and maximum number of elements in the corresponding text boxes below the histogram. <strong>Note:</strong> The min and max values can be equal if only a single search value is preferred. Try different combinations of values to get familiar.</p>
+<p><strong>Using the Global Search Bar</strong></p>
+<p>The search bar offers a slightly broader search functionality for formula than the filter menu. In the search bar, start typing <code>formula</code> which by default brings up 4 conventions - <strong>Hill</strong>, <strong>IUPAC</strong>, <strong>Reduced</strong>, <strong>Anonymous</strong> - in which each material is represented on the database. </p>
+<p>Select the preferred formula field, as per requirement. <strong>Note:</strong> Scroll down the auto-suggestion menu to choose from <code>data.model_system.chemical_formula.*</code>,as this aligns with a newer NOMAD data model for storing formula information. Then, follow the field name with the <code>=</code> sign and your search string. <strong>Equality</strong> search works best for chemical formulae, so take care to type in the complete string to perform an exact string match.</p>
+<p>For example, here we show search performed by choosing IUPAC convention and <strong>Equality</strong> search.</p>
+<figure>
+<p><img alt="Choosing the new-model IUPAC formula field in the search bar" src="../../assets/screenshots/search/search-bar-chemical-formula-iupac.png" />
+  </p>
+<figcaption>Scrolling to <code>data.model_system.chemical_formula.iupac</code> (tagged <strong>CCPNCSimulation</strong>) after typing "formula".</figcaption>
+</figure>
+<figure>
+<p><img alt="Entering an IUPAC formula value with equality search" src="../../assets/screenshots/search/search-bar-chemical-formula-iupac-value.png" />
+  </p>
+<figcaption>Applying an equality search for the complete IUPAC formula.</figcaption>
+</figure>
+<hr />
+<h3 id="search-by-elements">Search by Elements<a class="headerlink" href="#search-by-elements" title="Permanent link">&para;</a></h3>
+<p><strong>Using the Interactive Periodic Table</strong></p>
+<p>The periodic table provides a graphical, straightforward method for filtering records according to elemental composition. Only elements currently represented within the filtered dataset are displayed as active (blue tiles). Darker the blue tiles, the higher the frequency of occurrence of that element in the overall/filtered dataset. Ele,ents that don't occur in any records are greyed out.</p>
+<p>Selecting an element immediately restricts the search results to records containing that element. Following each selection, elements that are no longer present within the filtered records are greyed out automatically. Additional elements may then be selected to progressively narrow the search.</p>
+<p>For example:</p>
+<ol>
+<li>Select <strong>Sulphur</strong>.</li>
+<li>Review the updated periodic table.</li>
+<li>Select <strong>Chlorine</strong> to restrict the results further.</li>
+</ol>
+<div class="figure-row">
+<figure>
+<p><img alt="Periodic table before selecting Sulfur" src="../../assets/screenshots/search/periodic-table-sulphur.png" />
+  </p>
+<figcaption>Step 1: hovering over Sulfur, before selection.</figcaption>
+</figure>
+<figure>
+<p><img alt="Periodic table after selecting Sulfur and Chlorine" src="../../assets/screenshots/search/periodic-table-sulphur-chlorine.png" />
+  </p>
+<figcaption>Step 3: results narrowed to records containing both Sulfur and Chlorine.</figcaption>
+</figure>
+</div>
+<p><strong>Best Practice</strong></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The Filter Panel and Global Search Bar are generally more appropriate when element searches need to be combined with additional metadata filters.</p>
+</div>
+<hr />
+<h3 id="author">Author<a class="headerlink" href="#author" title="Permanent link">&para;</a></h3>
+<p>Author searches allow records to be located according to the primary author associated with a computational dataset. Searches may be performed using either the <strong>Author</strong> filter within the search panel or the <strong>Global Search Bar</strong>.</p>
+<p><strong>Using the Filter Panel</strong></p>
+<p>The <strong>Author / Origin / Dataset</strong> filter contains a searchable list of all authors represented within the database. The filter panel is the fastest and most recommended way to search by author metadata field.</p>
+<p>Begin typing the author's name into the search box or select the required author directly from the list of available values. The search text box provides autocomplete suggestion as the name is being typed to help choose the author names faster.</p>
+<figure>
+<p><img alt="Author name filter with autocomplete suggestion" src="../../assets/screenshots/search/filter-author-name.png" />
+  </p>
+<figcaption>Typing "Alber" into the Author name box suggests "Albert Bartok"; the checkbox list below is ordered by number of associated records.</figcaption>
+</figure>
+<p>As with other filter lists, authors are ordered according to the number of records associated with each author. The most frequently occurring author names in the records float to the top of the list and the author names are listed in decreasing frequency of occurrence from the top.</p>
+<p><strong>Using the Global Search Bar</strong></p>
+<p>Begin typing <code>author</code> in the global search bar and select the <code>authors.name</code> metadata field from the autocomplete suggestions. After selecting the field, enter an equals sign (<code>=</code>) followed by the author's name. <strong>Equality</strong> search is strongly recommended. As the author name is being typed, the autocomplete suggestion will offer author name suggestions that most closely match the search string. Click on the option that matches the search criterion and offers <strong>Equality</strong> search.</p>
+<figure>
+<p><img alt="Choosing the authors.name field in the search bar" src="../../assets/screenshots/search/search-bar-author-name.png" />
+  </p>
+<figcaption>Selecting <code>authors.name</code> after typing "author".</figcaption>
+</figure>
+<figure>
+<p><img alt="Entering an author name value with equality search" src="../../assets/screenshots/search/search-bar-author-name-value.png" />
+  </p>
+<figcaption>Choosing the equality search for the full name, "Albert Bartok".</figcaption>
+</figure>
+<p><strong>Best Practice</strong></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Whenever possible, use the <strong>Author</strong> filter panel or an <strong>Equality</strong> search in the Global Search Bar.</p>
+</div>
+<hr />
+<h3 id="immutable-id-magres-unique-identifier">Immutable ID (Magres unique identifier)<a class="headerlink" href="#immutable-id-magres-unique-identifier" title="Permanent link">&para;</a></h3>
+<p>Each legacy CCP-NC record is assigned a unique <strong>Immutable ID</strong> (historically referred to as the MAGRES ID). This identifier provides one of the most precise methods for locating individual database records.</p>
+<p><strong>Using the Filter Panel</strong></p>
+<p>Immutable IDs are listed within the <strong>Author / Origin / Dataset</strong> filter on the filter panel. The identifier must be entered as a <strong>seven-digit number</strong> with leading zeros.</p>
+<p>For example, <code>0002526</code> rather than <code>2526</code></p>
+<figure>
+<p><img alt="Magres Immutable ID filter with a seven-digit ID entered" src="../../assets/screenshots/search/filter-immutable-id.png" />
+  </p>
+<figcaption>The Magres Immutable ID box within the Author/Origin/Dataset filter, with the seven-digit identifier <code>0002526</code> entered.</figcaption>
+</figure>
+<p><strong>Using the Global Search Bar</strong></p>
+<p>Begin typing <code>immutable</code> on the global search bar and select the <code>data.ccpnc_metadata.ccpnc_record.immutable_id</code> metadata field.</p>
+<p>After selecting the field, enter an equals sign (<code>=</code>) followed by the seven-digit identifier. Choose <strong>Equality</strong> search.</p>
+<figure>
+<p><img alt="Choosing the immutable_id field in the search bar" src="../../assets/screenshots/search/search-bar-immutable-id.png" />
+  </p>
+<figcaption>Selecting <code>data.ccpnc_metadata.ccpnc_record.immutable_id</code> after typing "immutable".</figcaption>
+</figure>
+<figure>
+<p><img alt="Entering a seven-digit Immutable ID value with equality search" src="../../assets/screenshots/search/search-bar-immutable-id-value.png" />
+  </p>
+<figcaption>Applying an equality search for <code>0002526</code>.</figcaption>
+</figure>
+<p><strong>Legacy Record Versioning</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Historically, the legacy CCP-NC Database supported record versioning. Where multiple versions of the same record were deposited, each version shared the same Immutable ID.</p>
+<p>During migration to the CCP-NC Database, these versions became separate records while retaining their original identifier. As a result, a small number of Immutable ID searches may return more than one record. This behaviour is expected and reflects the historical versioning system rather than duplicate identifiers.</p>
+<p><img alt="Two search results sharing the same Immutable ID" src="../../assets/screenshots/search/immutable-id-legacy-version-artefact.png" />
+<small><em>An Immutable ID search returning two records — both "Silicon", Si2 — reflecting two versions of the same legacy record.</em></small></p>
+</div>
+<p><strong>Best Practice</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Always search using the complete seven-digit Immutable ID.</p>
+</div>
+<hr />
+<h3 id="external-database">External Database<a class="headerlink" href="#external-database" title="Permanent link">&para;</a></h3>
+<p>Many CCP-NC records contain references to crystal structures in external crystallographic databases, where the authors have made such referencing metadata available. Filtering by external database references allows shortlisting by a reference crystal structure faster.</p>
+<p><strong>Using the Filter Panel</strong></p>
+<p>The <strong>External Database</strong> filter is located within the <strong>Author / Origin / Dataset</strong> section. </p>
+<p>Select the required database from the available list by checking the appropriate checkboxes. This should list every single entry in the database that has a reference to the selected database.</p>
+<p>To filter further, one can enter the database reference code from the external database, if known. This search field, by default, performs an <strong>Equality</strong> search (exact-match only).</p>
+<figure>
+<p><img alt="External Database filter with CSD selected and a reference code entered" src="../../assets/screenshots/search/filter-ext-db-qatmon.png" />
+  </p>
+<figcaption>The <strong>csd</strong> database checked, with reference code <code>QATMON</code> entered in the Database Reference Code box.</figcaption>
+</figure>
+<figure>
+<p><img alt="Search results for the QATMON reference code filter" src="../../assets/screenshots/search/search-result-filter-menu-ext-db-qatmon.png" />
+  </p>
+<figcaption>The 4 records matching the exact reference code <code>QATMON</code>.</figcaption>
+</figure>
+<p><strong>Using the Global Search Bar</strong></p>
+<p>Begin typing <code>external database</code> in the global search bar and select the <code>data.ccpnc_metadata.external_database_reference.external_database_name</code> metadata field.</p>
+<p>After selecting the field, type the <code>=</code> sign and enter the database name using lowercase notation.</p>
+<p>Examples include:</p>
+<ul>
+<li><code>csd</code></li>
+<li><code>icsd</code></li>
+<li><code>cod</code></li>
+</ul>
+<p>Choose <strong>Equality</strong> search. Although Free-text search is available, Equality searches provide more reliable results as a partial search for <code>csd</code> with returns results containing both <code>csd</code> and <code>icsd</code>.</p>
+<p>To search also by an external database reference code, start typing <code>external database</code> in the global search bar and select the <code>data.ccpnc_metadata.external_database_reference.external_database_reference_code</code> metadata field from the drop-down menu. Follow it by typing an <code>=</code> sign and the exact reference code, choosing <strong>Equality</strong> or <strong>Free-text</strong>search. Please see screenshots and the <strong>Best Practice</strong> section below for how choosing either affects the search results.</p>
+<figure>
+<p><img alt="Choosing the external database name field in the search bar" src="../../assets/screenshots/search/search-bar-ext-db-name.png" />
+  </p>
+<figcaption>Selecting <code>data.ccpnc_metadata.external_database_reference.external_database_name</code> after typing "external database".</figcaption>
+</figure>
+<figure>
+<p><img alt="Entering a reference code value with the free-text option" src="../../assets/screenshots/search/search-bar-ext-db-value-free-text.png" />
+  </p>
+<figcaption>Entering <code>QATMON</code> and choosing the <strong>free-text</strong> option.</figcaption>
+</figure>
+<figure>
+<p><img alt="Search results for the free-text QATMON reference code search" src="../../assets/screenshots/search/search-results-ext-db-ref-free-text.png" />
+  </p>
+<figcaption>The free-text search returns 8 records — the base <strong>QATMON</strong> entry plus related structural variants — more than the equality search shown above.</figcaption>
+</figure>
+<p><strong>Best Practice</strong></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>
+<p>CSD REFCODEs may be searched using either <strong>Equality</strong> or <strong>Free-text</strong> searches.</p>
+<p>For example,</p>
+<div class="highlight"><pre><span></span><code>QATMON
+</code></pre></div>
+<p>An <strong>Equality</strong> search returns records associated directly with the base REFCODE.</p>
+<p>A <strong>Free-text</strong> search additionally returns related identifiers such as:</p>
+<ul>
+<li>QATMON01</li>
+<li>QATMON02</li>
+</ul>
+<p>and other structural variants derived from the same parent entry.</p>
+</li>
+<li>
+<p>ICSD reference numbers are unique numerical identifiers.</p>
+<p>For these identifiers, Equality and Free-text searches generally return the same results.</p>
+</li>
+</ul>
+</div>
+<hr />
+<h3 id="publication-doi">Publication DOI<a class="headerlink" href="#publication-doi" title="Permanent link">&para;</a></h3>
+<p>Publication DOI searches allow records associated with a particular scientific publication to be located quickly.</p>
+<p><strong>Using the Filter Panel</strong></p>
+<p>Locate the <strong>Publication DOI</strong> filter within the <strong>Author / Origin / Dataset</strong> section. Enter the exact DOI to search and filter, as this search box offers only <strong>Equality</strong> search.</p>
+<figure>
+<p><img alt="Publication DOI filter with a full DOI entered" src="../../assets/screenshots/search/filter-menu-publication-doi.png" />
+  </p>
+<figcaption>The Publication DOI box within the Author/Origin/Dataset filter, with a complete DOI entered.</figcaption>
+</figure>
+<p><strong>Using the Global Search Bar</strong></p>
+<p>Begin typing <code>doi</code> in the search bar and select the <code>data.ccpnc_metadata.publication_record.doi</code> metadata field.</p>
+<p>After selecting the field, enter an equals sign (<code>=</code>) followed by the DOI. For example, for search by partial DOI, one can enter <code>10.1038</code> and choose <strong>Free-text</strong> option from the drop-down menu OR, if the exact DOI is known, such as <code>10.1038/s41557-019-0304-z</code>, this search string can be entered and <strong>Equality</strong> option can be selected from the drop-down menu for a more refined search.</p>
+<figure>
+<p><img alt="Choosing the publication DOI field in the search bar" src="../../assets/screenshots/search/search-bar-doi-name.png" />
+  </p>
+<figcaption>Selecting <code>data.ccpnc_metadata.publication_record.doi</code> after typing "doi".</figcaption>
+</figure>
+<figure>
+<p><img alt="Partial DOI entered with the free-text option" src="../../assets/screenshots/search/search-bar-doi-partial-free-text.png" />
+  </p>
+<figcaption>A partial DOI, <code>10.1038</code>, searched with the <strong>free-text</strong> option.</figcaption>
+</figure>
+<figure>
+<p><img alt="Search results for the partial free-text DOI search" src="../../assets/screenshots/search/search-results-doi-free-text.png" />
+  </p>
+<figcaption>The 2,514 records matching the free-text DOI fragment.</figcaption>
+</figure>
+<figure>
+<p><img alt="Full DOI entered with the equality option" src="../../assets/screenshots/search/search-bar-doi-equality.png" />
+  </p>
+<figcaption>The complete DOI, <code>10.1038/s41557-019-0304-z</code>, searched with the <strong>equality</strong> option.</figcaption>
+</figure>
+<figure>
+<p><img alt="Search results for the equality DOI search" src="../../assets/screenshots/search/search-results-doi-equality.png" />
+  </p>
+<figcaption>The 4 records matching the exact DOI.</figcaption>
+</figure>
+<p><strong>Best Practice</strong></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use <strong>Equality</strong> search whenever the complete DOI is available.</p>
+<p>Reserve <strong>Free-text</strong> searches for situations where only part of the DOI is known.</p>
+</div>
+<hr />
+<h3 id="data-distribution-licence">Data distribution licence<a class="headerlink" href="#data-distribution-licence" title="Permanent link">&para;</a></h3>
+<p>Records can be filtered according to their data licence using the <strong>Author/Origin/Dataset</strong> section of the filter panel.</p>
+<p>Expand <strong>Author/Origin/Dataset</strong> and locate the <strong>License</strong> field. The licences represented in the current search results are displayed as selectable values together with the number of matching records.</p>
+<figure>
+<p><img alt="Filtering database records by data licence" src="../../assets/screenshots/search/filter-license.png" />
+  </p>
+<figcaption>Filtering records by data licence from the Author/Origin/Dataset section of the filter panel.</figcaption>
+</figure>
+<p>Select the checkbox next to the required licence to restrict the results to records carrying that licence. More than one licence can be selected if required.</p>
+<p>For licence searches, <strong>the filter panel is recommended instead of the main search bar</strong>. Licence values are stored using specific names and version identifiers, such as <code>PDDL v1.0</code> and <code>CC BY 4.0</code>. Selecting the displayed licence value from the filter panel avoids having to enter the exact stored string manually.</p>
+<p>CCP-NC currently permits data to be deposited under the following licences:</p>
+<table>
+<thead>
+<tr>
+<th>Licence</th>
+<th>Description</th>
+<th>Licence information</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PDDL v1.0</strong></td>
+<td>Open Data Commons Public Domain Dedication and License</td>
+<td><a href="https://opendatacommons.org/licenses/pddl/">Open Data Commons – PDDL v1.0</a></td>
+</tr>
+<tr>
+<td><strong>ODC-By v1.0</strong></td>
+<td>Open Data Commons Attribution License</td>
+<td><a href="https://opendatacommons.org/licenses/by/">Open Data Commons – ODC-By v1.0</a></td>
+</tr>
+<tr>
+<td><strong>CC BY 4.0</strong></td>
+<td>Creative Commons Attribution 4.0 International</td>
+<td><a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons – CC BY 4.0</a></td>
+</tr>
+</tbody>
+</table>
+<p>As with the other filters, licence filtering can be combined with additional criteria such as publication DOI, dataset, external database, chemical composition, DFT code, functional or NMR parameters to progressively narrow the results.</p>
+<hr />
+<h3 id="exchange-correlation-functional">Exchange-Correlation Functional<a class="headerlink" href="#exchange-correlation-functional" title="Permanent link">&para;</a></h3>
+<p>The CCP-NC Database allows records to be filtered according to the exchange-correlation (XC) functional used during the electronic structure calculation. This can be particularly useful when comparing computational results generated using different levels of density functional theory.</p>
+<p><strong>Using the Filter Panel</strong></p>
+<p>The <strong>Functionals</strong> filter contains the exchange-correlation functionals represented within the current search results.</p>
+<p>The database currently includes functionals from several families, including:</p>
+<ul>
+<li>Local Density Approximation (LDA)</li>
+<li>Generalised Gradient Approximation (GGA)</li>
+<li>Hybrid GGA</li>
+<li>Meta-GGA</li>
+<li>Hartree-Fock (HF)</li>
+</ul>
+<p>Examples currently represented in the database include:</p>
+<ul>
+<li>LDA</li>
+<li>PBE</li>
+<li>PW91</li>
+<li>RPBE</li>
+<li>WC</li>
+<li>PBESOL</li>
+<li>BLYP</li>
+<li>B3LYP</li>
+<li>PBE0</li>
+<li>HSE03</li>
+<li>HSE06</li>
+<li>RSCAN</li>
+<li>HF</li>
+</ul>
+<p>Select one or more functionals using the available checkboxes.</p>
+<figure>
+<p><img alt="Functionals filter panel" src="../../assets/screenshots/search/filter-xc-functional.png" />
+  </p>
+<figcaption>The Functionals filter, with Jacob's Ladder families (GGA, LDA) and individual XC Functional Names, both ordered by frequency of occurrence.</figcaption>
+</figure>
+<p><strong>Using the Global Search Bar</strong></p>
+<p>To filter first by a functional family, begin typing <code>jacob</code> in the global search bar and <code>data.model_method.jacobs_ladder</code> to select the metadata field from the autocomplete suggestions.</p>
+<p>After selecting the field, enter an equals sign (<code>=</code>) followed by the functional family name. It is recommended first to search using one of the listed families in <strong>Using the Filter Panel</strong> sub-section above and choosing <strong>Equality</strong> search from the dropdown menu.</p>
+<figure>
+<p><img alt="Choosing the Jacob's Ladder field in the search bar" src="../../assets/screenshots/search/search-bar-jacobs-ladder.png" />
+  </p>
+<figcaption>Selecting <code>data.model_method.jacobs_ladder</code> after typing "jacob".</figcaption>
+</figure>
+<figure>
+<p><img alt="Entering GGA as the Jacob's Ladder value with equality search" src="../../assets/screenshots/search/search-bar-jacobs-ladder-value.png" />
+  </p>
+<figcaption>Applying an equality search for the family <code>GGA</code>.</figcaption>
+</figure>
+<p>To further filter by a functional name, begin typing <code>functional</code> in the global search bar and choosing <code>data.model_method.xc.functional_key</code> metadata field from the dropdown menu. As before, type in an <code>=</code> sign followed by the functional name to search.</p>
+<p>Choose <strong>Equality</strong> search. Although Free-text search is available, Equality searches are recommended because several functional names contain common substrings.</p>
+<p>For example,</p>
+<ul>
+<li>PBE</li>
+<li>RPBE</li>
+<li>PBESOL</li>
+</ul>
+<p>share similar text and may produce unintended matches when using Free-text searches.</p>
+<figure>
+<p><img alt="Choosing the functional_key field in the search bar" src="../../assets/screenshots/search/search-bar-functional-name.png" />
+  </p>
+<figcaption>Selecting <code>data.model_method.xc.functional_key</code> (tagged <strong>CCPNCSimulation</strong>) after typing "functional".</figcaption>
+</figure>
+<figure>
+<p><img alt="Entering PBE as the functional name value with equality search" src="../../assets/screenshots/search/search-bar-functional-value-equality.png" />
+  </p>
+<figcaption>Applying an equality search for <code>PBE</code>.</figcaption>
+</figure>
+<p><strong>Best Practice</strong></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Equality search should always be used when searching by exchange-correlation functional.</p>
+</div>
+<hr />
+<h3 id="site-resolved-magnetic-shielding-isotropy-iso">Site-resolved Magnetic Shielding Isotropy (σiso)<a class="headerlink" href="#site-resolved-magnetic-shielding-isotropy-iso" title="Permanent link">&para;</a></h3>
+<p>One of the principal strengths of the CCP-NC Database is the ability to search computational NMR data directly using calculated site-resolved magnetic shielding values.</p>
+<p>Magnetic shielding searches are currently available for the most commonly studied NMR-active elements represented within the database.</p>
+<p><strong>Using the Filter Panel</strong></p>
+<p>The filter panel is the only recommended search method for filtering records by NMR parameters. Within the <strong>NMR Parameters</strong> section, select <code>Magnetic Shielding (ppm)</code> and then the element of interest.</p>
+<p>Magnetic shielding searches are currently supported for the common NMR elements listed within the interface. Each element contains an interactive histogram showing the distribution of calculated shielding values across the database.</p>
+<p>Adjust the histogram sliders to define the desired search range. Only records containing site-resolved magnetic shielding values within the selected range are returned.</p>
+<figure>
+<p><img alt="NMR Parameters filter showing magnetic shielding histograms" src="../../assets/screenshots/search/filter-ms-histogram-carbon.png" />
+  </p>
+<figcaption>The Magnetic Shielding (ppm) filter, with histograms and min/max range boxes for Hydrogen, Carbon and Nitrogen.</figcaption>
+</figure>
+<figure>
+<p><img alt="Applied magnetic shielding isotropy range filter" src="../../assets/screenshots/search/search-criteria-filter-ms.png" />
+  </p>
+<figcaption>The resulting applied filter chip, showing the selected isotropy range.</figcaption>
+</figure>
+<hr />
+<h3 id="site-resolved-electric-field-gradient-vzz">Site-resolved Electric Field Gradient (Vzz)<a class="headerlink" href="#site-resolved-electric-field-gradient-vzz" title="Permanent link">&para;</a></h3>
+<p>The CCP-NC Database also supports searching using calculated site-resolved electric field gradient (EFG) <code>V_zz</code> component.</p>
+<p>As with magnetic shielding, searches are performed using numerical ranges on the histogram.</p>
+<p><strong>Using the Filter Panel</strong></p>
+<p>The filter panel is the only recommended search method for filtering records by NMR parameters. Within the <strong>NMR Parameters</strong> section, select <code>Electric Field Gradient (Hartree atomic units)</code> and then the required element.</p>
+<p>Interactive histograms display the distribution of calculated Vzz values currently represented within the database. Adjust the histogram sliders to define the desired numerical range.</p>
+<p>Only records containing site-resolved EFG values within the selected range are returned.</p>
+<figure>
+<p><img alt="NMR Parameters filter showing electric field gradient histograms" src="../../assets/screenshots/search/filter-efg-histogram-nitrogen.png" />
+  </p>
+<figcaption>The Electric Field Gradient filter, with histograms and min/max range boxes for the overall Vzz distribution, Nitrogen and Fluorine.</figcaption>
+</figure>
+<figure>
+<p><img alt="Applied electric field gradient range filter for Nitrogen" src="../../assets/screenshots/search/search-criteria-filter-efg.png" />
+  </p>
+<figcaption>The resulting applied filter chip: <code>Vzz &gt;= -0.896 AND &lt;= -0.358 a_u_efg</code>, matching the Nitrogen range selected above.</figcaption>
+</figure>
+<hr />
+<h2 id="known-limitations">Known Limitations<a class="headerlink" href="#known-limitations" title="Permanent link">&para;</a></h2>
+<p>The CCP-NC Database provides multiple complementary search methods. Although most metadata can be searched using either the Filter Panels or the Global Search Bar, users should be aware of current limitations and recommended practices.</p>
+<h3 id="equality-versus-free-text-searches">Equality versus Free-text Searches<a class="headerlink" href="#equality-versus-free-text-searches" title="Permanent link">&para;</a></h3>
+<p>For structured metadata, <strong>Equality</strong> searches generally provide the most reliable and predictable results.</p>
+<p>Free-text searches should primarily be used when:</p>
+<ul>
+<li>searching long material names;</li>
+<li>searching partial publication DOIs; or</li>
+<li>deliberately searching for related external database reference codes.</li>
+</ul>
+<hr />
+<h3 id="short-chemical-formulae">Short Chemical Formulae<a class="headerlink" href="#short-chemical-formulae" title="Permanent link">&para;</a></h3>
+<p>Free-text searches may produce unintended matches for short chemical formulae.</p>
+<p>For example,</p>
+<div class="highlight"><pre><span></span><code>H4
+</code></pre></div>
+<p>may also match</p>
+<div class="highlight"><pre><span></span><code>H14
+H24
+</code></pre></div>
+<p>and similar formulae containing the same sequence of characters.</p>
+<p>Equality searches are therefore strongly recommended whenever the complete chemical formula is known.</p>
+<hr />
+<h3 id="author-searches">Author Searches<a class="headerlink" href="#author-searches" title="Permanent link">&para;</a></h3>
+<p>Although both Equality and Free-text searches are available for author names, Equality searches generally provide more reliable and predictable results.</p>
+<p>For most users, the <strong>Author</strong> filter panel remains the preferred search method.</p>
+<hr />
+<h3 id="exchange-correlation-functional-searches">Exchange-Correlation Functional Searches<a class="headerlink" href="#exchange-correlation-functional-searches" title="Permanent link">&para;</a></h3>
+<p>Functionals such as <strong>PBE</strong>, <strong>RPBE</strong> and <strong>PBESOL</strong> share similar text.</p>
+<p>To avoid unintended substring matches, Equality searches should always be used.</p>
+<hr />
+<h3 id="numerical-nmr-parameter-searches">Numerical NMR Parameter Searches<a class="headerlink" href="#numerical-nmr-parameter-searches" title="Permanent link">&para;</a></h3>
+<p>Although magnetic shielding and electric field gradient quantities are indexed within the underlying search infrastructure, direct numerical range searching through the Global Search Bar is currently limited and not recommended.</p>
+<p>Histogram-based filtering within the Filter Panel provides the recommended workflow for these searches.</p>
+<hr />
+<h3 id="ongoing-development">Ongoing Development<a class="headerlink" href="#ongoing-development" title="Permanent link">&para;</a></h3>
+<p>The CCP-NC Database is under active development.</p>
+<p>Additional search capabilities, interface improvements and expanded metadata support may be introduced in future releases.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../getting-started/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Getting Started">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Getting Started
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../results/" class="md-footer__link md-footer__link--next" aria-label="Next: Viewing Results">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Viewing Results
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow", "toc.integrate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
