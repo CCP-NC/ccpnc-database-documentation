@@ -149,7 +149,7 @@ For magres uploads this includes, where applicable:
 - chemical name;
 - data-distribution licence;
 - publication DOI;
-- structural descriptors or notes;
+- additional notes describing the calculation or structure where needed;
 - external database name and reference code;
 - author notes;
 - author and publication references;
@@ -311,17 +311,25 @@ The upload interface currently supports embargo periods of up to **36 months**. 
 
 Because publication makes the upload immutable, make sure the record metadata are complete before publishing under embargo.
 
-### What licence is applied when I publish?
+### Does the CCP-NC database assign DOIs to deposited data?
 
-Currently, the underlying NOMAD publication workflow applies **CC BY 4.0** when data are published.
+The CCP-NC database does not currently mint DOIs for individual records or datasets.
 
-CCP-NC also records the depositor's intended data-distribution licence as searchable metadata. The current metadata template accepts:
+Where deposited calculations are associated with a scientific publication, the publication DOI should be recorded in the metadata. This connects the deposited data with the corresponding publication but does not provide the CCP-NC record or dataset with its own DOI.
 
-- `pddl`
-- `odc-by`
-- `cc-by`
+Support for persistent identifiers for CCP-NC datasets is being investigated as part of the future development of the service.
 
-CCP-NC-specific publication-licence handling is still being developed.
+### What licence applies to data deposited in the CCP-NC database?
+
+CCP-NC records include a **Data Distribution License** metadata field that allows depositors to specify the intended licence for their data. The currently supported licence values are:
+
+- **PDDL v1.0** — Open Data Commons Public Domain Dedication and License
+- **ODC-By v1.0** — Open Data Commons Attribution License
+- **CC BY 4.0** — Creative Commons Attribution 4.0 International
+
+However, the current CCP-NC staging service is built on NOMAD Oasis, whose publication workflow applies **CC BY 4.0** when an upload is published. This means that, where a different licence is specified in the CCP-NC metadata, the depositor-selected licence and the licence applied by the underlying NOMAD publication workflow may differ.
+
+The CCP-NC licence field should therefore currently be understood as recording the **intended data-distribution licence supplied by the depositor**. In `metadata_info.csv`, the corresponding accepted values are `pddl`, `odc-by` and `cc-by`. Resolving this ambiguity is an area of ongoing development for the service.
 
 ### Why can my CCP-NC metadata licence differ from the licence shown by NOMAD?
 
@@ -330,12 +338,6 @@ This is a current limitation.
 The CCP-NC metadata field records the depositor's intended data-distribution licence and is available for search and processed-data export. Separately, the underlying NOMAD publication workflow currently applies CC BY 4.0 at platform publication.
 
 These two layers are being aligned as the CCP-NC service develops towards production. Users should therefore record their intended CCP-NC licence accurately in the upload metadata.
-
-### Does the database assign a DOI to every record?
-
-No DOI-minting service for individual CCP-NC records is currently described by the upload workflow.
-
-Where a record is associated with a peer-reviewed publication, provide the publication DOI in its metadata.
 
 ---
 
